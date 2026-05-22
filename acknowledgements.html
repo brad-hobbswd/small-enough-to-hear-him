@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 
 <meta
@@ -42,7 +43,7 @@ box-sizing:border-box;
 --border:rgba(58,40,28,.10);
 
 --shadow:
-0 24px 55px rgba(58,40,28,.08);
+0 14px 34px rgba(58,40,28,.06);
 
 }
 
@@ -54,17 +55,19 @@ font-family:'Inter',sans-serif;
 
 color:var(--text);
 
-line-height:2;
+line-height:1.68;
 
 overflow-x:hidden;
 
 }
 
+/* NAVIGATION */
+
 nav{
 
 width:100%;
 
-padding:24px 7%;
+padding:18px 6%;
 
 display:flex;
 
@@ -80,7 +83,7 @@ z-index:1000;
 backdrop-filter:blur(14px);
 
 background:
-rgba(245,234,215,.82);
+rgba(245,234,215,.84);
 
 border-bottom:
 1px solid rgba(58,40,28,.05);
@@ -91,7 +94,7 @@ border-bottom:
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.75rem;
 
 font-weight:700;
 
@@ -105,7 +108,7 @@ display:flex;
 
 align-items:center;
 
-gap:14px;
+gap:8px;
 
 flex-wrap:wrap;
 
@@ -115,17 +118,17 @@ flex-wrap:wrap;
 
 text-decoration:none;
 
-font-size:.92rem;
+font-size:.82rem;
 
 font-weight:600;
 
-padding:10px 16px;
+padding:8px 13px;
 
 border-radius:999px;
 
 color:var(--brown);
 
-transition:.3s ease;
+transition:.25s ease;
 
 }
 
@@ -136,119 +139,74 @@ rgba(255,255,255,.55);
 
 }
 
-.hero{
+/* PAGE */
 
-padding:
-130px 7% 60px;
+.wrapper{
 
-max-width:1000px;
+max-width:980px;
 
 margin:auto;
 
-position:relative;
+padding:
+42px 6%
+50px;
 
 }
 
-.hero::before{
+.page-label{
 
-content:"";
-
-position:absolute;
-
-top:30px;
-right:30px;
-
-width:240px;
-height:240px;
-
-border-radius:50%;
-
-background:
-rgba(221,185,125,.16);
-
-filter:blur(60px);
-
-z-index:-1;
-
-}
-
-.label{
-
-display:inline-flex;
-
-align-items:center;
-
-padding:10px 18px;
-
-border-radius:999px;
-
-background:
-rgba(255,255,255,.5);
-
-border:
-1px solid rgba(58,40,28,.06);
-
-font-size:.8rem;
-
-font-weight:700;
+font-size:.7rem;
 
 letter-spacing:2px;
 
 text-transform:uppercase;
 
+font-weight:700;
+
 color:var(--gold);
 
-margin-bottom:26px;
+margin-bottom:10px;
 
 }
 
-.hero h1{
+h1{
 
 font-family:'Cormorant Garamond',serif;
 
 font-size:
-clamp(4rem,8vw,6rem);
+clamp(2.8rem,5vw,4.8rem);
 
-line-height:.95;
+line-height:.92;
 
-max-width:800px;
+margin-bottom:18px;
 
-margin-bottom:26px;
+max-width:760px;
 
 color:var(--brown-dark);
 
 }
 
-.hero p{
+.page-intro{
 
-max-width:760px;
+max-width:650px;
 
-font-size:1.08rem;
+font-size:.94rem;
 
-line-height:1.95;
+line-height:1.72;
 
 color:var(--text-soft);
 
-}
-
-.content{
-
-padding:
-10px 7% 100px;
+margin-bottom:24px;
 
 }
 
-.content-card{
-
-max-width:860px;
-
-margin:auto;
+.card{
 
 background:var(--card);
 
-padding:75px 60px;
+padding:28px 24px;
 
-border-radius:36px;
+border-radius:22px;
 
 border:
 1px solid var(--border);
@@ -261,7 +219,7 @@ overflow:hidden;
 
 }
 
-.content-card::before{
+.card::before{
 
 content:"";
 
@@ -271,7 +229,7 @@ top:0;
 left:0;
 
 width:100%;
-height:4px;
+height:3px;
 
 background:
 linear-gradient(
@@ -282,35 +240,43 @@ var(--gold-soft)
 
 }
 
-.content-card p{
+.card p{
 
-font-size:1.08rem;
+font-size:.92rem;
 
-line-height:2;
+line-height:1.72;
 
-margin-bottom:34px;
+margin-bottom:18px;
 
 color:var(--text-soft);
 
 }
 
+.card p:last-child{
+
+margin-bottom:0;
+
+}
+
+/* QUOTE */
+
 .quote{
 
-margin:50px 0;
+margin:24px 0;
 
-padding:42px 38px;
+padding:24px 22px;
 
-border-radius:28px;
+border-radius:18px;
 
 background:
 linear-gradient(
 135deg,
-rgba(221,185,125,.14),
-rgba(255,255,255,.5)
+rgba(221,185,125,.12),
+rgba(255,255,255,.45)
 );
 
 border:
-1px solid rgba(200,154,86,.12);
+1px solid rgba(200,154,86,.10);
 
 }
 
@@ -318,17 +284,19 @@ border:
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2.3rem;
+font-size:1.9rem;
 
-line-height:1.2;
+line-height:1.12;
 
 color:var(--brown-dark);
 
 }
 
+/* FOOTER */
+
 .site-footer{
 
-padding:34px 7% 28px;
+padding:24px 6% 18px;
 
 background:
 linear-gradient(
@@ -338,11 +306,14 @@ linear-gradient(
 #b9854f 100%
 );
 
+border-top:
+1px solid rgba(58,40,28,.10);
+
 }
 
 .footer-inner{
 
-max-width:1300px;
+max-width:1200px;
 
 margin:auto;
 
@@ -351,7 +322,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 
-gap:24px;
+gap:14px;
 
 flex-wrap:wrap;
 
@@ -361,9 +332,9 @@ flex-wrap:wrap;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.6rem;
 
-margin-bottom:4px;
+margin-bottom:2px;
 
 color:#2d2118;
 
@@ -371,7 +342,7 @@ color:#2d2118;
 
 .footer-brand p{
 
-font-size:.92rem;
+font-size:.78rem;
 
 color:#5e4430;
 
@@ -381,7 +352,7 @@ color:#5e4430;
 
 display:flex;
 
-gap:12px;
+gap:8px;
 
 flex-wrap:wrap;
 
@@ -391,18 +362,27 @@ flex-wrap:wrap;
 
 text-decoration:none;
 
-font-size:.9rem;
+font-size:.76rem;
 
 font-weight:600;
 
-padding:10px 16px;
+padding:7px 11px;
 
 border-radius:999px;
 
 background:
-rgba(255,248,239,.45);
+rgba(255,248,239,.38);
 
 color:#3d2a1f;
+
+transition:.25s ease;
+
+}
+
+.footer-links a:hover{
+
+background:
+rgba(255,248,239,.82);
 
 }
 
@@ -414,11 +394,9 @@ text-align:right;
 
 .footer-copy p{
 
-font-style:italic;
+font-size:.76rem;
 
-font-size:.92rem;
-
-margin-bottom:5px;
+margin-bottom:2px;
 
 color:#4d3726;
 
@@ -426,7 +404,7 @@ color:#4d3726;
 
 .footer-copy span{
 
-font-size:.8rem;
+font-size:.64rem;
 
 letter-spacing:1px;
 
@@ -436,11 +414,71 @@ color:#74533a;
 
 }
 
-@media(max-width:900px){
+/* MOBILE */
 
-.content-card{
+@media(max-width:760px){
 
-padding:50px 34px;
+nav{
+
+padding:16px 5%;
+
+}
+
+.logo{
+
+font-size:1.55rem;
+
+}
+
+.wrapper{
+
+padding:
+32px 5%
+40px;
+
+}
+
+h1{
+
+font-size:3.1rem;
+
+}
+
+.page-intro{
+
+font-size:.9rem;
+
+}
+
+.card{
+
+padding:22px 18px;
+
+border-radius:18px;
+
+}
+
+.card p{
+
+font-size:.88rem;
+
+line-height:1.66;
+
+margin-bottom:16px;
+
+}
+
+.quote{
+
+padding:20px 18px;
+
+margin:20px 0;
+
+}
+
+.quote h2{
+
+font-size:1.6rem;
 
 }
 
@@ -461,6 +499,7 @@ text-align:left;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -476,38 +515,46 @@ Small Enough to Hear Him
 <a href="index.html">Home</a>
 <a href="contents.html">Contents</a>
 <a href="about.html">About</a>
-<a href="dedication.html">Dedication</a>
 
 </div>
 
 </nav>
 
-<section class="hero">
+<div class="wrapper">
 
-<div class="label">
-Acknowledgements
+<div class="page-label">
+Opening Pages
 </div>
 
 <h1>
-Grateful for Every Quiet Hand Along the Way
+Acknowledgements
 </h1>
 
-<p>
-Every season, every prayer, every difficult moment, and every quiet reminder from Jesus became part of this journey. This book exists because grace carried a willing vessel through moments where strength alone never could.
+<p class="page-intro">
+
+Gratitude for every prayer, every quiet encouragement,
+and every moment of grace that carried this journey forward.
+
 </p>
 
-</section>
-
-<section class="content">
-
-<div class="content-card">
+<div class="card">
 
 <p>
-First and above everything else, thank You Jesus.
+First and above everything else,
+thank You Jesus.
 </p>
 
 <p>
-Thank You for remaining faithful through every valley, every wilderness season, every hidden tear, and every quiet moment where Your presence carried strength into weary places. None of these pages would exist without Your mercy, patience, and endless grace.
+
+Thank You for remaining faithful through every valley,
+every wilderness season,
+every hidden tear,
+and every quiet moment where Your presence carried strength into weary places.
+
+None of these pages would exist without Your mercy,
+patience,
+and endless grace.
+
 </p>
 
 <div class="quote">
@@ -520,42 +567,76 @@ through every chapter.”
 </div>
 
 <p>
-Thank you to every person who continued praying even during unseen seasons. Quiet prayers carry eternal weight. Encouragement spoken during difficult moments often reaches farther than people realize.
+
+Thank you to every person who continued praying even during unseen seasons.
+
+Quiet prayers carry eternal weight.
+Encouragement spoken during difficult moments often reaches farther than people realize.
+
 </p>
 
 <p>
-Thank you to family who continued walking beside the journey. Thank you for patience, kindness, and support during long writing days, reflective nights, and moments where words slowly formed chapter by chapter.
+
+Thank you to family who continued walking beside the journey.
+
+Thank you for patience,
+kindness,
+and support during long writing days,
+reflective nights,
+and moments where words slowly formed chapter by chapter.
+
 </p>
 
 <p>
-Thank you to every believer who continues choosing humility, surrender, and closeness with Jesus within a world constantly chasing visibility and noise. Quiet faithfulness still matters deeply.
+
+Thank you to every believer who continues choosing humility,
+surrender,
+and closeness with Jesus within a world constantly chasing visibility and noise.
+
+Quiet faithfulness still matters deeply.
+
 </p>
 
 <p>
-Many people may never fully understand hidden obedience, yet heaven sees every surrendered moment offered from love.
+
+Many people may never fully understand hidden obedience,
+yet heaven sees every surrendered moment offered from love.
+
 </p>
 
 <p>
-Thank you to every reader opening these pages with a sincere heart. Prayer remains that every chapter gently points hearts toward the peace, nearness, and voice of Jesus.
+
+Thank you to every reader opening these pages with a sincere heart.
+
+Prayer remains that every chapter gently points hearts toward the peace,
+nearness,
+and voice of Jesus.
+
 </p>
 
 <p>
+
 No large name.
 No performance.
 No striving for recognition.
+
 </p>
 
 <p>
+
 Just a willing vessel continuing to learn how to remain small enough to hear Him.
+
 </p>
 
 <p>
+
 Jesus deserves every ounce of glory.
+
 </p>
 
 </div>
 
-</section>
+</div>
 
 <footer class="site-footer">
 
