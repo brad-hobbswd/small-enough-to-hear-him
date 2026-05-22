@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,7 @@ name="viewport"
 content="width=device-width, initial-scale=1.0">
 
 <title>
-Small Enough to Hear Him
+Small Enough to Hear Him | Bradley Hobbs
 </title>
 
 <link
@@ -42,7 +44,7 @@ box-sizing:border-box;
 --border:rgba(58,40,28,.10);
 
 --shadow:
-0 22px 55px rgba(58,40,28,.08);
+0 18px 42px rgba(58,40,28,.07);
 
 }
 
@@ -54,19 +56,19 @@ font-family:'Inter',sans-serif;
 
 color:var(--text);
 
-line-height:1.9;
+line-height:1.75;
 
 overflow-x:hidden;
 
 }
 
-/* NAV */
+/* NAVIGATION */
 
 nav{
 
 width:100%;
 
-padding:24px 7%;
+padding:22px 7%;
 
 display:flex;
 
@@ -82,7 +84,7 @@ z-index:1000;
 backdrop-filter:blur(14px);
 
 background:
-rgba(245,234,215,.82);
+rgba(245,234,215,.84);
 
 border-bottom:
 1px solid rgba(58,40,28,.05);
@@ -107,7 +109,7 @@ display:flex;
 
 align-items:center;
 
-gap:14px;
+gap:12px;
 
 flex-wrap:wrap;
 
@@ -117,24 +119,24 @@ flex-wrap:wrap;
 
 text-decoration:none;
 
-color:var(--brown);
-
-font-size:.92rem;
+font-size:.88rem;
 
 font-weight:600;
 
-padding:10px 16px;
+padding:10px 15px;
 
 border-radius:999px;
 
-transition:.3s ease;
+color:var(--brown);
+
+transition:.25s ease;
 
 }
 
 .nav-links a:hover{
 
 background:
-rgba(255,255,255,.55);
+rgba(255,255,255,.58);
 
 }
 
@@ -143,128 +145,33 @@ rgba(255,255,255,.55);
 .hero{
 
 padding:
-80px 7% 50px;
+50px 7% 40px;
 
-max-width:1450px;
+max-width:1200px;
 
 margin:auto;
 
-}
+text-align:center;
 
-.hero-grid{
-
-display:grid;
-
-grid-template-columns:
-1.05fr .95fr;
-
-gap:60px;
-
-align-items:center;
+position:relative;
 
 }
 
-.hero-text h1{
+.hero-content{
 
-font-family:'Cormorant Garamond',serif;
+max-width:920px;
 
-font-size:
-clamp(4rem,8vw,7rem);
+margin:auto;
 
-line-height:.92;
-
-margin-bottom:26px;
-
-color:var(--brown-dark);
+position:relative;
 
 }
-
-.hero-text p{
-
-font-size:1.08rem;
-
-max-width:620px;
-
-color:var(--text-soft);
-
-margin-bottom:34px;
-
-}
-
-.hero-buttons{
-
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-}
-
-.btn{
-
-text-decoration:none;
-
-padding:15px 24px;
-
-border-radius:999px;
-
-font-size:.95rem;
-
-font-weight:600;
-
-transition:.35s ease;
-
-}
-
-.btn-primary{
-
-background:
-linear-gradient(
-135deg,
-var(--gold),
-var(--gold-soft)
-);
-
-color:#2d2118;
-
-box-shadow:
-0 12px 24px rgba(200,154,86,.22);
-
-}
-
-.btn-primary:hover{
-
-transform:translateY(-3px);
-
-}
-
-.btn-secondary{
-
-border:
-1px solid rgba(58,40,28,.10);
-
-background:
-rgba(255,255,255,.45);
-
-color:var(--brown-dark);
-
-}
-
-.btn-secondary:hover{
-
-background:
-rgba(255,255,255,.75);
-
-}
-
-/* BANNER IMAGE */
 
 .hero-banner{
 
 position:relative;
+
+margin-bottom:28px;
 
 }
 
@@ -276,10 +183,10 @@ display:block;
 
 border-radius:34px;
 
-box-shadow:var(--shadow);
-
 border:
 1px solid rgba(58,40,28,.08);
+
+box-shadow:var(--shadow);
 
 }
 
@@ -296,11 +203,97 @@ height:180px;
 border-radius:50%;
 
 background:
-rgba(222,185,125,.28);
+rgba(221,185,125,.22);
 
-filter:blur(35px);
+filter:blur(36px);
 
 z-index:-1;
+
+}
+
+.hero-description{
+
+max-width:650px;
+
+margin:
+0 auto 30px;
+
+font-size:1rem;
+
+line-height:1.8;
+
+color:var(--text-soft);
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:16px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+text-decoration:none;
+
+padding:14px 22px;
+
+border-radius:999px;
+
+font-size:.92rem;
+
+font-weight:600;
+
+transition:.3s ease;
+
+}
+
+.btn-primary{
+
+background:
+linear-gradient(
+135deg,
+var(--gold),
+var(--gold-soft)
+);
+
+color:#2d2118;
+
+box-shadow:
+0 10px 22px rgba(200,154,86,.18);
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-3px);
+
+}
+
+.btn-secondary{
+
+background:
+rgba(255,255,255,.5);
+
+border:
+1px solid rgba(58,40,28,.08);
+
+color:var(--brown-dark);
+
+}
+
+.btn-secondary:hover{
+
+background:
+rgba(255,255,255,.82);
 
 }
 
@@ -308,13 +301,13 @@ z-index:-1;
 
 .section{
 
-padding:70px 7%;
+padding:60px 7%;
 
 }
 
 .section-inner{
 
-max-width:1300px;
+max-width:1280px;
 
 margin:auto;
 
@@ -324,9 +317,11 @@ margin:auto;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:3.2rem;
+font-size:2.9rem;
 
-margin-bottom:18px;
+line-height:1.05;
+
+margin-bottom:14px;
 
 color:var(--brown-dark);
 
@@ -334,26 +329,28 @@ color:var(--brown-dark);
 
 .section-text{
 
-max-width:850px;
+max-width:760px;
 
-font-size:1.03rem;
+font-size:1rem;
+
+line-height:1.8;
 
 color:var(--text-soft);
 
 }
 
-/* CARDS */
+/* FEATURE CARDS */
 
 .card-grid{
 
-margin-top:45px;
+margin-top:38px;
 
 display:grid;
 
 grid-template-columns:
-repeat(3,1fr);
+repeat(3,minmax(0,1fr));
 
-gap:28px;
+gap:20px;
 
 }
 
@@ -361,30 +358,57 @@ gap:28px;
 
 background:var(--card);
 
-padding:34px 30px;
+padding:28px 24px;
 
-border-radius:28px;
+border-radius:24px;
 
 border:
 1px solid var(--border);
 
 box-shadow:var(--shadow);
 
-transition:.35s ease;
+transition:.3s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:3px;
+
+background:
+linear-gradient(
+to right,
+var(--gold),
+var(--gold-soft)
+);
 
 }
 
 .card:hover{
 
-transform:translateY(-8px);
+transform:translateY(-5px);
 
 }
 
 .card span{
 
-font-size:.8rem;
+display:block;
 
-letter-spacing:3px;
+font-size:.72rem;
+
+letter-spacing:2.5px;
 
 text-transform:uppercase;
 
@@ -392,9 +416,7 @@ font-weight:700;
 
 color:var(--gold);
 
-display:block;
-
-margin-bottom:16px;
+margin-bottom:12px;
 
 }
 
@@ -402,11 +424,11 @@ margin-bottom:16px;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.8rem;
 
-line-height:1.1;
+line-height:1.08;
 
-margin-bottom:16px;
+margin-bottom:12px;
 
 color:var(--brown-dark);
 
@@ -414,11 +436,13 @@ color:var(--brown-dark);
 
 .card p{
 
-font-size:.97rem;
+font-size:.92rem;
+
+line-height:1.7;
 
 color:var(--text-soft);
 
-margin-bottom:24px;
+margin-bottom:18px;
 
 }
 
@@ -426,9 +450,71 @@ margin-bottom:24px;
 
 text-decoration:none;
 
+font-size:.88rem;
+
 font-weight:600;
 
 color:var(--brown-dark);
+
+transition:.25s ease;
+
+}
+
+.card a:hover{
+
+color:var(--gold);
+
+}
+
+/* JOURNEY SECTION */
+
+.journey{
+
+padding:75px 7%;
+
+background:
+linear-gradient(
+180deg,
+rgba(234,217,191,.45),
+transparent
+);
+
+}
+
+.journey-inner{
+
+max-width:950px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.journey h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:
+clamp(2.8rem,5vw,4.5rem);
+
+line-height:1.05;
+
+margin-bottom:20px;
+
+color:var(--brown-dark);
+
+}
+
+.journey p{
+
+font-size:1rem;
+
+line-height:1.85;
+
+color:var(--text-soft);
+
+margin-bottom:20px;
 
 }
 
@@ -436,16 +522,9 @@ color:var(--brown-dark);
 
 .quote{
 
-padding:90px 7%;
+padding:70px 7%;
 
 text-align:center;
-
-background:
-linear-gradient(
-180deg,
-rgba(234,217,191,.55),
-transparent
-);
 
 }
 
@@ -454,11 +533,11 @@ transparent
 font-family:'Cormorant Garamond',serif;
 
 font-size:
-clamp(2.8rem,5vw,5rem);
+clamp(2.4rem,5vw,4.2rem);
 
-line-height:1.1;
+line-height:1.08;
 
-max-width:850px;
+max-width:760px;
 
 margin:auto;
 
@@ -478,9 +557,7 @@ color:var(--gold);
 
 .site-footer{
 
-margin-top:40px;
-
-padding:34px 7% 28px;
+padding:30px 7% 24px;
 
 background:
 linear-gradient(
@@ -506,7 +583,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 
-gap:26px;
+gap:20px;
 
 flex-wrap:wrap;
 
@@ -516,7 +593,7 @@ flex-wrap:wrap;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.9rem;
 
 margin-bottom:4px;
 
@@ -526,7 +603,7 @@ color:#2d2118;
 
 .footer-brand p{
 
-font-size:.92rem;
+font-size:.86rem;
 
 color:#5e4430;
 
@@ -536,7 +613,7 @@ color:#5e4430;
 
 display:flex;
 
-gap:12px;
+gap:10px;
 
 flex-wrap:wrap;
 
@@ -546,18 +623,27 @@ flex-wrap:wrap;
 
 text-decoration:none;
 
-font-size:.9rem;
+font-size:.84rem;
 
 font-weight:600;
 
-padding:10px 16px;
+padding:8px 14px;
 
 border-radius:999px;
 
 background:
-rgba(255,248,239,.45);
+rgba(255,248,239,.42);
 
 color:#3d2a1f;
+
+transition:.25s ease;
+
+}
+
+.footer-links a:hover{
+
+background:
+rgba(255,248,239,.82);
 
 }
 
@@ -569,11 +655,9 @@ text-align:right;
 
 .footer-copy p{
 
-font-style:italic;
+font-size:.84rem;
 
-font-size:.92rem;
-
-margin-bottom:5px;
+margin-bottom:4px;
 
 color:#4d3726;
 
@@ -581,9 +665,9 @@ color:#4d3726;
 
 .footer-copy span{
 
-font-size:.8rem;
+font-size:.72rem;
 
-letter-spacing:1px;
+letter-spacing:1.3px;
 
 text-transform:uppercase;
 
@@ -595,7 +679,6 @@ color:#74533a;
 
 @media(max-width:1100px){
 
-.hero-grid,
 .card-grid{
 
 grid-template-columns:1fr;
@@ -608,25 +691,38 @@ grid-template-columns:1fr;
 
 .hero{
 
-padding-top:55px;
+padding:
+38px 6% 32px;
 
 }
 
-.hero-text h1{
+.hero-description{
 
-font-size:4rem;
+font-size:.96rem;
+
+}
+
+.section{
+
+padding:50px 6%;
 
 }
 
 .section-title{
 
-font-size:2.5rem;
+font-size:2.4rem;
+
+}
+
+.journey{
+
+padding:65px 6%;
 
 }
 
 .quote{
 
-padding:70px 7%;
+padding:55px 6%;
 
 }
 
@@ -661,8 +757,8 @@ Small Enough to Hear Him
 
 <a href="contents.html">Contents</a>
 <a href="about.html">About</a>
-<a href="preface.html">Preface</a>
-<a href="dedication.html">Dedication</a>
+<a href="verses.html">Scriptures</a>
+<a href="prayer.html">Prayer</a>
 
 </div>
 
@@ -670,19 +766,24 @@ Small Enough to Hear Him
 
 <section class="hero">
 
-<div class="hero-grid">
+<div class="hero-content">
 
-<div class="hero-text">
+<div class="hero-banner">
 
-<h1>
-Small Enough<br>
-to Hear Him
-</h1>
+<img
+src="D575D9FA-00CC-4986-9B7E-DCC6D918603C.png"
+alt="Small Enough to Hear Him Banner">
 
-<p>
-A reflective and immersive journey through hidden faithfulness,
-quiet surrender, wilderness seasons, and learning to stay close
-enough to hear the voice of Jesus above every competing noise.
+<div class="banner-glow"></div>
+
+</div>
+
+<p class="hero-description">
+
+A quiet journey through surrender,
+hidden faithfulness, wilderness seasons,
+and staying close enough to hear the voice of Jesus.
+
 </p>
 
 <div class="hero-buttons">
@@ -703,18 +804,6 @@ About the Author
 
 </div>
 
-<div class="hero-banner">
-
-<img
-src="D575D9FA-00CC-4986-9B7E-DCC6D918603C.png"
-alt="Small Enough to Hear Him Banner">
-
-<div class="banner-glow"></div>
-
-</div>
-
-</div>
-
 </section>
 
 <section class="section">
@@ -726,26 +815,29 @@ A Quiet Journey of Faith
 </h2>
 
 <p class="section-text">
-These pages were written from hidden places filled with prayer,
-waiting, surrender, healing, and learning to trust Jesus more deeply.
-Rather than building a large name or chasing recognition, this
-journey reflects the beauty of remaining willing, teachable,
-and close enough to hear His voice.
+
+Written from hidden places filled with prayer,
+waiting, healing, surrender, and learning to trust Jesus more deeply.
+These pages reflect the beauty of remaining willing, teachable,
+and close enough to hear His voice clearly.
+
 </p>
 
 <div class="card-grid">
 
 <div class="card">
 
-<span>Hidden Seasons</span>
+<span>
+Hidden Seasons
+</span>
 
 <h3>
 Faithfulness in Quiet Places
 </h3>
 
 <p>
-Discover how God shapes hearts within wilderness roads,
-waiting seasons, and unseen moments of obedience.
+Discover how God shapes hearts within waiting seasons
+and unseen moments of obedience.
 </p>
 
 <a href="chapter1.html">
@@ -756,15 +848,17 @@ Read the Journey →
 
 <div class="card">
 
-<span>Surrender</span>
+<span>
+Surrender
+</span>
 
 <h3>
 No Big Name
 </h3>
 
 <p>
-A message centered around humility, stillness,
-and becoming a willing vessel in the hands of Jesus.
+A message centered on humility, stillness,
+and becoming a willing vessel for Jesus.
 </p>
 
 <a href="chapter7.html">
@@ -775,15 +869,17 @@ Explore More →
 
 <div class="card">
 
-<span>The Name Above Every Name</span>
+<span>
+Jesus
+</span>
 
 <h3>
-Jesus
+The Name Above Every Name
 </h3>
 
 <p>
-Through every chapter and every season, one truth remains:
-there is a name that saves, restores, and remains faithful.
+One truth remains through every chapter:
+Jesus still saves, restores, and remains faithful.
 </p>
 
 <a href="chapter10.html">
@@ -793,6 +889,30 @@ Continue Reading →
 </div>
 
 </div>
+
+</div>
+
+</section>
+
+<section class="journey">
+
+<div class="journey-inner">
+
+<h2>
+Still Small Enough to Hear Him
+</h2>
+
+<p>
+Not every calling begins loudly.
+Many journeys with Jesus begin quietly,
+within hidden places where surrender becomes deeper than recognition.
+</p>
+
+<p>
+This book reflects the beauty of remaining humble,
+faithful, teachable, and close to the presence of God
+through every changing season of life.
+</p>
 
 </div>
 
@@ -814,7 +934,7 @@ Continue Reading →
 <div class="footer-brand">
 
 <h2>
-Still Small Enough to Hear Him
+Small Enough to Hear Him
 </h2>
 
 <p>
@@ -827,7 +947,8 @@ Walking quietly with Jesus.
 
 <a href="contents.html">Contents</a>
 <a href="about.html">About</a>
-<a href="preface.html">Preface</a>
+<a href="prayer.html">Prayer</a>
+<a href="verses.html">Scriptures</a>
 
 </div>
 
