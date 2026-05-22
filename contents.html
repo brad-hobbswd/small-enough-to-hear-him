@@ -1,3 +1,5 @@
+<!-- contents.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +30,8 @@ box-sizing:border-box;
 --bg-main:#f5ead7;
 --bg-alt:#ead9bf;
 
---cream:#f8f1e4;
+--cream:#fffaf1;
+
 --gold:#c89a56;
 --gold-soft:#ddb97d;
 
@@ -38,21 +41,22 @@ box-sizing:border-box;
 --text:#2a241f;
 --text-soft:#6d6257;
 
---card:#fffaf1;
---border:rgba(94,67,48,.12);
+--border:rgba(94,67,48,.10);
 
---shadow:0 18px 40px rgba(54,38,28,.08);
+--shadow:
+0 14px 30px rgba(54,38,28,.06);
 
 }
 
 body{
 
 background:var(--bg-main);
+
 color:var(--text);
 
 font-family:'Inter',sans-serif;
 
-line-height:1.9;
+line-height:1.7;
 
 overflow-x:hidden;
 
@@ -62,9 +66,9 @@ overflow-x:hidden;
 
 .hero{
 
-min-height:75vh;
+min-height:52vh;
 
-padding:120px 8% 90px;
+padding:90px 7% 60px;
 
 display:flex;
 align-items:center;
@@ -73,8 +77,10 @@ justify-content:center;
 position:relative;
 
 background:
-linear-gradient(rgba(245,234,215,.78),
-rgba(245,234,215,.88)),
+linear-gradient(
+rgba(245,234,215,.84),
+rgba(245,234,215,.92)
+),
 
 url("book-banner.jpg");
 
@@ -95,37 +101,40 @@ left:0;
 bottom:0;
 
 width:100%;
-height:120px;
+height:80px;
 
 background:
-linear-gradient(to top,
+linear-gradient(
+to top,
 var(--bg-main),
-transparent);
+transparent
+);
 
 }
 
 .hero-content{
 
 position:relative;
+
 z-index:2;
 
-max-width:900px;
+max-width:760px;
 
 }
 
 .hero-sub{
 
-letter-spacing:5px;
+letter-spacing:4px;
 
 text-transform:uppercase;
 
-font-size:.82rem;
+font-size:.72rem;
 
 color:var(--gold);
 
-margin-bottom:22px;
+margin-bottom:18px;
 
-font-weight:600;
+font-weight:700;
 
 }
 
@@ -133,13 +142,14 @@ font-weight:600;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:clamp(4rem,9vw,7.5rem);
+font-size:
+clamp(3.4rem,7vw,5.8rem);
 
-line-height:.92;
+line-height:.88;
 
 font-weight:700;
 
-margin-bottom:24px;
+margin-bottom:18px;
 
 color:var(--brown-dark);
 
@@ -147,9 +157,11 @@ color:var(--brown-dark);
 
 .hero p{
 
-font-size:1.15rem;
+font-size:1rem;
 
-max-width:720px;
+line-height:1.75;
+
+max-width:620px;
 
 margin:auto;
 
@@ -161,9 +173,9 @@ color:var(--text-soft);
 
 .intro{
 
-padding:90px 8%;
+padding:55px 7% 38px;
 
-max-width:1050px;
+max-width:900px;
 
 margin:auto;
 
@@ -175,9 +187,9 @@ text-align:center;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:3.4rem;
+font-size:2.7rem;
 
-margin-bottom:24px;
+margin-bottom:14px;
 
 color:var(--brown-dark);
 
@@ -185,17 +197,58 @@ color:var(--brown-dark);
 
 .intro p{
 
-font-size:1.08rem;
+font-size:1rem;
+
+line-height:1.75;
+
+color:var(--text-soft);
+
+max-width:680px;
+
+margin:auto;
+
+}
+
+/* SECTION TITLES */
+
+.section-title{
+
+max-width:1320px;
+
+margin:
+0 auto 18px;
+
+padding:0 7%;
+
+}
+
+.section-title h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.4rem;
+
+margin-bottom:4px;
+
+color:var(--brown-dark);
+
+}
+
+.section-title p{
+
+font-size:.95rem;
+
+line-height:1.7;
 
 color:var(--text-soft);
 
 }
 
-/* CARDS */
+/* CONTENTS */
 
 .contents{
 
-padding:30px 8% 120px;
+padding:6px 7% 50px;
 
 }
 
@@ -204,11 +257,11 @@ padding:30px 8% 120px;
 display:grid;
 
 grid-template-columns:
-repeat(3,1fr);
+repeat(3,minmax(0,1fr));
 
-gap:28px;
+gap:20px;
 
-max-width:1400px;
+max-width:1320px;
 
 margin:auto;
 
@@ -216,17 +269,17 @@ margin:auto;
 
 .card{
 
-background:var(--card);
+background:var(--cream);
 
 border:1px solid var(--border);
 
-border-radius:28px;
+border-radius:24px;
 
-padding:38px 34px;
+padding:26px 24px;
 
 box-shadow:var(--shadow);
 
-transition:.35s ease;
+transition:.28s ease;
 
 position:relative;
 
@@ -244,29 +297,31 @@ top:0;
 left:0;
 
 width:100%;
-height:4px;
+height:3px;
 
 background:
-linear-gradient(to right,
+linear-gradient(
+to right,
 var(--gold),
-var(--gold-soft));
+var(--gold-soft)
+);
 
 }
 
 .card:hover{
 
-transform:translateY(-8px);
+transform:translateY(-4px);
 
 box-shadow:
-0 26px 55px rgba(54,38,28,.12);
+0 18px 36px rgba(54,38,28,.10);
 
 }
 
 .chapter{
 
-font-size:.78rem;
+font-size:.7rem;
 
-letter-spacing:3px;
+letter-spacing:2.5px;
 
 text-transform:uppercase;
 
@@ -274,7 +329,7 @@ color:var(--gold);
 
 font-weight:700;
 
-margin-bottom:18px;
+margin-bottom:10px;
 
 }
 
@@ -282,11 +337,11 @@ margin-bottom:18px;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.6rem;
 
-line-height:1.15;
+line-height:1.05;
 
-margin-bottom:18px;
+margin-bottom:10px;
 
 color:var(--brown-dark);
 
@@ -294,11 +349,13 @@ color:var(--brown-dark);
 
 .card p{
 
-font-size:.98rem;
+font-size:.9rem;
+
+line-height:1.65;
 
 color:var(--text-soft);
 
-margin-bottom:26px;
+margin-bottom:16px;
 
 }
 
@@ -307,7 +364,6 @@ margin-bottom:26px;
 display:inline-flex;
 
 align-items:center;
-gap:10px;
 
 text-decoration:none;
 
@@ -315,9 +371,9 @@ color:var(--brown-dark);
 
 font-weight:600;
 
-font-size:.95rem;
+font-size:.86rem;
 
-transition:.3s ease;
+transition:.25s ease;
 
 }
 
@@ -325,7 +381,7 @@ transition:.3s ease;
 
 color:var(--gold);
 
-transform:translateX(5px);
+transform:translateX(4px);
 
 }
 
@@ -333,11 +389,13 @@ transform:translateX(5px);
 
 .quote{
 
-padding:120px 8%;
+padding:70px 7%;
 
 background:var(--bg-alt);
 
 text-align:center;
+
+margin-top:6px;
 
 }
 
@@ -345,11 +403,12 @@ text-align:center;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:clamp(2.8rem,5vw,5rem);
+font-size:
+clamp(2.4rem,5vw,4.2rem);
 
-line-height:1.1;
+line-height:1.08;
 
-max-width:900px;
+max-width:760px;
 
 margin:auto;
 
@@ -367,33 +426,154 @@ font-style:italic;
 
 /* FOOTER */
 
-footer{
+.site-footer{
 
-padding:60px 8%;
+position:relative;
 
-text-align:center;
+padding:28px 7% 22px;
 
-background:#efe0c7;
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#cfa36d 0%,
+#e2c18d 45%,
+#b9854f 100%
+);
+
+border-top:
+1px solid rgba(58,40,28,.10);
 
 }
 
-footer h3{
+.footer-glow{
+
+position:absolute;
+
+top:-90px;
+right:-90px;
+
+width:180px;
+height:180px;
+
+border-radius:50%;
+
+background:
+rgba(255,248,235,.20);
+
+filter:blur(35px);
+
+}
+
+.footer-inner{
+
+position:relative;
+
+z-index:2;
+
+max-width:1300px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-brand h2{
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.9rem;
 
-margin-bottom:10px;
+line-height:1;
 
-color:var(--brown-dark);
+margin-bottom:4px;
+
+color:#2d2118;
 
 }
 
-footer p{
+.footer-brand p{
 
-color:var(--text-soft);
+font-size:.86rem;
 
-font-size:.95rem;
+color:#5e4430;
+
+}
+
+.footer-links{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+font-size:.84rem;
+
+font-weight:600;
+
+color:#3d2a1f;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+background:
+rgba(255,250,242,.42);
+
+transition:.25s ease;
+
+}
+
+.footer-links a:hover{
+
+background:
+rgba(255,250,242,.82);
+
+}
+
+.footer-copy{
+
+text-align:right;
+
+}
+
+.footer-copy p{
+
+font-size:.84rem;
+
+margin-bottom:4px;
+
+color:#4d3726;
+
+}
+
+.footer-copy span{
+
+font-size:.72rem;
+
+letter-spacing:1.3px;
+
+text-transform:uppercase;
+
+color:#74533a;
 
 }
 
@@ -414,7 +594,7 @@ repeat(2,1fr);
 
 .hero{
 
-padding:110px 7% 70px;
+padding:100px 6% 60px;
 
 }
 
@@ -422,23 +602,39 @@ padding:110px 7% 70px;
 
 grid-template-columns:1fr;
 
+gap:16px;
+
+}
+
+.contents{
+
+padding:6px 6% 45px;
+
 }
 
 .card{
 
-padding:34px 28px;
-
-}
-
-.intro h2{
-
-font-size:2.6rem;
+padding:24px 22px;
 
 }
 
 .quote{
 
-padding:90px 7%;
+padding:60px 6%;
+
+}
+
+.footer-inner{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-copy{
+
+text-align:left;
 
 }
 
@@ -463,8 +659,8 @@ to Hear Him
 </h1>
 
 <p>
-No big name. Just a willing vessel. A quiet journey through surrender,
-hidden faithfulness, listening, and learning to stay close enough
+A quiet journey through surrender, humility,
+hidden faithfulness, and staying close enough
 to hear the voice of Jesus.
 </p>
 
@@ -475,207 +671,406 @@ to hear the voice of Jesus.
 <section class="intro">
 
 <h2>
-Book Contents
+Contents
 </h2>
 
 <p>
-Each chapter walks through hidden seasons, quiet surrender,
-wilderness roads, and the beauty of remaining willing in the hands
-of God. Written with a reflective and immersive tone, this journey
-invites hearts back toward stillness, humility, and the voice of Jesus.
+A collection of chapters, reflections, prayers,
+and Scriptures centered upon quiet surrender
+and closeness with Jesus.
 </p>
 
 </section>
+
+<div class="section-title">
+
+<h2>
+Opening Pages
+</h2>
+
+<p>
+Beginning reflections introducing the heart behind the journey.
+</p>
+
+</div>
 
 <section class="contents">
 
 <div class="grid">
 
 <div class="card">
-<div class="chapter">Chapter One</div>
-<h3>Hidden Places and Holy Preparation</h3>
+
+<div class="chapter">
+Opening
+</div>
+
+<h3>
+Preface
+</h3>
+
 <p>
-Discovering how God prepares hearts through hidden seasons long before visible purpose arrives.
+A quiet introduction to the heart behind the message.
 </p>
-<a href="chapter1.html">
-Read Chapter →
+
+<a href="preface.html">
+Open Page →
 </a>
+
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Two</div>
-<h3>Learning the Language of Listening</h3>
+
+<div class="chapter">
+Special
+</div>
+
+<h3>
+Dedication
+</h3>
+
 <p>
-Slowing down enough to recognize the quiet ways Jesus still speaks.
+Words of honor, gratitude, and love.
 </p>
-<a href="chapter2.html">
-Read Chapter →
+
+<a href="dedication.html">
+Open Page →
 </a>
+
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Three</div>
-<h3>The Danger of Wanting a Name</h3>
+
+<div class="chapter">
+Special
+</div>
+
+<h3>
+Acknowledgements
+</h3>
+
 <p>
-A reflection on humility, recognition, and remaining centered upon Jesus.
+Thankfulness for every hidden prayer and encouragement.
 </p>
-<a href="chapter3.html">
-Read Chapter →
+
+<a href="acknowledgements.html">
+Open Page →
 </a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="section-title">
+
+<h2>
+Chapters
+</h2>
+
+<p>
+Seventeen chapters centered on surrender, humility, and listening for Jesus.
+</p>
+
+</div>
+
+<!-- REPLACE ONLY THE CHAPTER CARDS SECTION WITH THIS UPDATED VERSION -->
+
+<section class="contents">
+
+<div class="grid">
+
+<div class="card">
+<div class="chapter">Chapter 1</div>
+<h3>Small Enough to Hear Him</h3>
+<p>
+The beginning of a quieter walk with Jesus.
+</p>
+<a href="chapter1.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Four</div>
-<h3>Faithfulness When Nobody Sees</h3>
+<div class="chapter">Chapter 2</div>
+<h3>Hidden Places</h3>
 <p>
-Finding beauty within hidden obedience and unseen surrender.
+Learning how hidden seasons still carry purpose.
 </p>
-<a href="chapter4.html">
-Read Chapter →
-</a>
+<a href="chapter2.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Five</div>
-<h3>The Wilderness Was Not Empty</h3>
+<div class="chapter">Chapter 3</div>
+<h3>When Weakness Speaks</h3>
 <p>
-Understanding how God still moves within waiting and uncertain seasons.
+Remaining humble within a world chasing attention.
 </p>
-<a href="chapter5.html">
-Read Chapter →
-</a>
+<a href="chapter3.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Six</div>
-<h3>The Weight of Hidden Tears</h3>
+<div class="chapter">Chapter 4</div>
+<h3>Quiet Obedience</h3>
 <p>
-A reminder that Jesus sees every hidden burden and every quiet ache.
+Quiet obedience that heaven still sees clearly.
 </p>
-<a href="chapter6.html">
-Read Chapter →
-</a>
+<a href="chapter4.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Seven</div>
-<h3>Less of Me, More of Jesus</h3>
+<div class="chapter">Chapter 5</div>
+<h3>The Weight of Waiting</h3>
 <p>
-Learning the freedom found within humility and surrender.
+Trusting God through waiting and wilderness seasons.
 </p>
-<a href="chapter7.html">
-Read Chapter →
-</a>
+<a href="chapter5.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Eight</div>
-<h3>The Ministry of Remaining Small</h3>
+<div class="chapter">Chapter 6</div>
+<h3>Grace for the Weary</h3>
 <p>
-Exploring the quiet strength of serving without needing recognition.
+Grace for weary hearts carrying hidden burdens.
 </p>
-<a href="chapter8.html">
-Read Chapter →
-</a>
+<a href="chapter6.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Nine</div>
-<h3>Prepared in Season and Out</h3>
+<div class="chapter">Chapter 7</div>
+<h3>The Beauty of Hidden Faithfulness</h3>
 <p>
-Growing roots through daily faithfulness and spiritual preparation.
+Discovering strength through surrender and humility.
 </p>
-<a href="chapter9.html">
-Read Chapter →
-</a>
+<a href="chapter7.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Ten</div>
-<h3>There Is a Name I Know</h3>
+<div class="chapter">Chapter 8</div>
+<h3>When Tears Become Prayer</h3>
 <p>
-Holding tightly to the name of Jesus through every storm and valley.
+Faithfulness within ordinary and unseen moments.
 </p>
-<a href="chapter10.html">
-Read Chapter →
-</a>
+<a href="chapter8.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Eleven</div>
-<h3>When Heaven Feels Silent</h3>
+<div class="chapter">Chapter 9</div>
+<h3>The Danger of Becoming Loud</h3>
 <p>
-Trusting the presence of God even during seasons that feel quiet.
+Guarding hearts from distraction and spiritual noise.
 </p>
-<a href="chapter11.html">
-Read Chapter →
-</a>
+<a href="chapter9.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Twelve</div>
-<h3>The Battle Between Noise and Stillness</h3>
+<div class="chapter">Chapter 10</div>
+<h3>The Weight of Glory</h3>
 <p>
-Protecting peace and creating space to hear the voice of Jesus.
+Holding tightly to the name of Jesus.
 </p>
-<a href="chapter12.html">
-Read Chapter →
-</a>
+<a href="chapter10.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Thirteen</div>
-<h3>Serving Without Being Seen</h3>
+<div class="chapter">Chapter 11</div>
+<h3>Faithfulness in Small Places</h3>
 <p>
-Remaining faithful within hidden acts of love and quiet obedience.
+Trusting Jesus through silent and uncertain seasons.
 </p>
-<a href="chapter13.html">
-Read Chapter →
-</a>
+<a href="chapter11.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Fourteen</div>
-<h3>The Weight of Carrying a Name</h3>
+<div class="chapter">Chapter 12</div>
+<h3>When God Feels Silent</h3>
 <p>
-Releasing pressure, labels, and expectations at the feet of Jesus.
+Creating space to hear the voice of God clearly.
 </p>
-<a href="chapter14.html">
-Read Chapter →
-</a>
+<a href="chapter12.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Fifteen</div>
-<h3>The Strength Found in Surrender</h3>
+<div class="chapter">Chapter 13</div>
+<h3>The Beauty of a Willing Yes</h3>
 <p>
-Discovering peace through open hands and deeper trust in God.
+A willing yes offered fully to Jesus.
 </p>
-<a href="chapter15.html">
-Read Chapter →
-</a>
+<a href="chapter13.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Sixteen</div>
-<h3>When Jesus Whispers Directions</h3>
+<div class="chapter">Chapter 14</div>
+<h3>Staying Near the Feet of Jesus</h3>
 <p>
-Following the gentle leading of God through ordinary moments.
+Choosing closeness with Jesus above distraction.
 </p>
-<a href="chapter16.html">
-Read Chapter →
-</a>
+<a href="chapter14.html">Read Chapter →</a>
 </div>
 
 <div class="card">
-<div class="chapter">Chapter Seventeen</div>
-<h3>Returning to the Feet of Jesus</h3>
+<div class="chapter">Chapter 15</div>
+<h3>The Voice Above the Noise</h3>
 <p>
-Coming back to stillness, worship, and closeness with Christ.
+Listening for the voice above every noise.
 </p>
-<a href="chapter17.html">
-Read Chapter →
+<a href="chapter15.html">Read Chapter →</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter 16</div>
+<h3>Content With Being Hidden</h3>
+<p>
+Finding peace within hidden faithfulness.
+</p>
+<a href="chapter16.html">Read Chapter →</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter 17</div>
+<h3>Small Enough to Hear Him</h3>
+<p>
+Returning again to the feet of Jesus.
+</p>
+<a href="chapter17.html">Read Chapter →</a>
+</div>
+
+</div>
+
+</section>
+
+<div class="section-title">
+
+<h2>
+Additional Pages
+</h2>
+
+<p>
+Extra reflections, prayers, and pages connected to the journey.
+</p>
+
+</div>
+
+<section class="contents">
+
+<div class="grid">
+
+<div class="card">
+
+<div class="chapter">
+Author
+</div>
+
+<h3>
+About the Author
+</h3>
+
+<p>
+The heart behind the message and the journey.
+</p>
+
+<a href="about.html">
+Open Page →
 </a>
+
+</div>
+
+<div class="card">
+
+<div class="chapter">
+Scriptures
+</div>
+
+<h3>
+Verses That Shaped the Journey
+</h3>
+
+<p>
+Meaningful verses centered on humility and Jesus.
+</p>
+
+<a href="verses.html">
+Open Page →
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="chapter">
+Prayer
+</div>
+
+<h3>
+A Quiet Prayer
+</h3>
+
+<p>
+A prayer for weary hearts learning to rest in Jesus.
+</p>
+
+<a href="prayer.html">
+Open Page →
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="chapter">
+Behind the Book
+</div>
+
+<h3>
+Why I Wrote This Book
+</h3>
+
+<p>
+The quiet places and hidden seasons behind the message.
+</p>
+
+<a href="why-i-wrote-this.html">
+Open Page →
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="chapter">
+Connect
+</div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+A quiet place for encouragement and connection.
+</p>
+
+<a href="contact.html">
+Open Page →
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="chapter">
+Final Page
+</div>
+
+<h3>
+Thank You
+</h3>
+
+<p>
+A final message of gratitude and encouragement.
+</p>
+
+<a href="thankyou.html">
+Open Page →
+</a>
+
 </div>
 
 </div>
@@ -691,8 +1086,6 @@ Read Chapter →
 
 </section>
 
-<!-- REPLACE YOUR CURRENT FOOTER IN contents.html WITH THIS -->
-
 <footer class="site-footer">
 
 <div class="footer-glow"></div>
@@ -706,7 +1099,7 @@ Small Enough to Hear Him
 </h2>
 
 <p>
-No big name. Just a willing vessel.
+Walking quietly with Jesus.
 </p>
 
 </div>
@@ -715,15 +1108,16 @@ No big name. Just a willing vessel.
 
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
-<a href="preface.html">Preface</a>
-<a href="dedication.html">Dedication</a>
+<a href="verses.html">Scriptures</a>
+<a href="prayer.html">Prayer</a>
+<a href="contact.html">Contact</a>
 
 </div>
 
 <div class="footer-copy">
 
 <p>
-Still small enough to hear Him.
+No big name. Just a willing vessel.
 </p>
 
 <span>
@@ -735,194 +1129,6 @@ Still small enough to hear Him.
 </div>
 
 </footer>
-
-<style>
-
-.site-footer{
-
-position:relative;
-
-margin-top:70px;
-
-padding:34px 7% 28px;
-
-overflow:hidden;
-
-background:
-linear-gradient(
-135deg,
-#cfa36d 0%,
-#e2c18d 45%,
-#b9854f 100%
-);
-
-border-top:
-1px solid rgba(58,40,28,.10);
-
-}
-
-.footer-glow{
-
-position:absolute;
-
-top:-80px;
-right:-80px;
-
-width:220px;
-height:220px;
-
-border-radius:50%;
-
-background:
-rgba(255,248,235,.24);
-
-filter:blur(40px);
-
-}
-
-.footer-inner{
-
-position:relative;
-z-index:2;
-
-max-width:1300px;
-
-margin:auto;
-
-display:flex;
-
-align-items:center;
-justify-content:space-between;
-
-gap:26px;
-
-flex-wrap:wrap;
-
-}
-
-.footer-brand h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:2.1rem;
-
-line-height:1;
-
-font-weight:700;
-
-margin-bottom:5px;
-
-color:#2d2118;
-
-}
-
-.footer-brand p{
-
-font-size:.94rem;
-
-letter-spacing:.2px;
-
-color:#5e4430;
-
-}
-
-.footer-links{
-
-display:flex;
-
-align-items:center;
-
-gap:12px;
-
-flex-wrap:wrap;
-
-}
-
-.footer-links a{
-
-text-decoration:none;
-
-font-size:.9rem;
-
-font-weight:600;
-
-color:#3d2a1f;
-
-padding:10px 16px;
-
-border-radius:999px;
-
-background:
-rgba(255,250,242,.45);
-
-backdrop-filter:blur(8px);
-
-transition:.3s ease;
-
-}
-
-.footer-links a:hover{
-
-background:
-rgba(255,250,242,.85);
-
-transform:translateY(-2px);
-
-}
-
-.footer-copy{
-
-text-align:right;
-
-}
-
-.footer-copy p{
-
-font-size:.92rem;
-
-font-style:italic;
-
-margin-bottom:5px;
-
-color:#4d3726;
-
-}
-
-.footer-copy span{
-
-font-size:.8rem;
-
-letter-spacing:1.5px;
-
-text-transform:uppercase;
-
-color:#74533a;
-
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.footer-inner{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:22px;
-
-}
-
-.footer-copy{
-
-text-align:left;
-
-}
-
-}
-
-</style>
 
 </body>
 </html>
