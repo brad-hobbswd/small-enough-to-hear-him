@@ -1,0 +1,747 @@
+<!-- chapter14.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Chapter Fourteen | Staying Near the Feet of Jesus
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--bg:#f5ead7;
+--card:#fffaf2;
+
+--gold:#c89a56;
+--gold-soft:#ddb97d;
+
+--brown:#5b4130;
+--brown-dark:#2d2118;
+
+--text:#2c251f;
+--text-soft:#6f6459;
+
+--border:rgba(58,40,28,.10);
+
+--shadow:
+0 24px 55px rgba(58,40,28,.08);
+
+}
+
+body{
+
+background:var(--bg);
+
+font-family:'Inter',sans-serif;
+
+color:var(--text);
+
+line-height:2;
+
+overflow-x:hidden;
+
+}
+
+nav{
+
+width:100%;
+
+padding:24px 7%;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+backdrop-filter:blur(14px);
+
+background:
+rgba(245,234,215,.82);
+
+border-bottom:
+1px solid rgba(58,40,28,.05);
+
+}
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+font-weight:700;
+
+color:var(--brown-dark);
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+flex-wrap:wrap;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+font-size:.92rem;
+
+font-weight:600;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+color:var(--brown);
+
+transition:.3s ease;
+
+}
+
+.nav-links a:hover{
+
+background:
+rgba(255,255,255,.55);
+
+}
+
+.chapter-hero{
+
+padding:
+120px 7% 55px;
+
+max-width:1050px;
+
+margin:auto;
+
+position:relative;
+
+}
+
+.chapter-hero::before{
+
+content:"";
+
+position:absolute;
+
+top:30px;
+right:40px;
+
+width:240px;
+height:240px;
+
+border-radius:50%;
+
+background:
+rgba(221,185,125,.16);
+
+filter:blur(60px);
+
+z-index:-1;
+
+}
+
+.chapter-meta{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+background:
+rgba(255,255,255,.52);
+
+border:
+1px solid rgba(58,40,28,.06);
+
+font-size:.8rem;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:28px;
+
+}
+
+.chapter-hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:
+clamp(4rem,8vw,6.4rem);
+
+line-height:.92;
+
+max-width:850px;
+
+margin-bottom:28px;
+
+color:var(--brown-dark);
+
+}
+
+.chapter-description{
+
+max-width:720px;
+
+font-size:1.08rem;
+
+line-height:1.95;
+
+color:var(--text-soft);
+
+}
+
+.chapter-content{
+
+padding:
+10px 7% 90px;
+
+}
+
+.content-inner{
+
+max-width:860px;
+
+margin:auto;
+
+background:var(--card);
+
+padding:70px 60px;
+
+border-radius:36px;
+
+border:
+1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.content-inner::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:
+linear-gradient(
+to right,
+var(--gold),
+var(--gold-soft)
+);
+
+}
+
+.content-inner p{
+
+font-size:1.08rem;
+
+color:var(--text-soft);
+
+margin-bottom:34px;
+
+}
+
+.pull-quote{
+
+margin:50px 0;
+
+padding:45px 40px;
+
+border-radius:28px;
+
+background:
+linear-gradient(
+135deg,
+rgba(221,185,125,.14),
+rgba(255,255,255,.45)
+);
+
+border:
+1px solid rgba(200,154,86,.12);
+
+}
+
+.pull-quote h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.4rem;
+
+line-height:1.2;
+
+color:var(--brown-dark);
+
+}
+
+.chapter-navigation{
+
+padding:0 7% 90px;
+
+}
+
+.chapter-nav-inner{
+
+max-width:860px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.chapter-navigation a{
+
+text-decoration:none;
+
+padding:16px 24px;
+
+border-radius:999px;
+
+background:
+rgba(255,255,255,.5);
+
+border:
+1px solid rgba(58,40,28,.08);
+
+font-size:.95rem;
+
+font-weight:600;
+
+color:var(--brown-dark);
+
+transition:.35s ease;
+
+}
+
+.site-footer{
+
+padding:34px 7% 28px;
+
+background:
+linear-gradient(
+135deg,
+#cfa36d 0%,
+#e2c18d 45%,
+#b9854f 100%
+);
+
+}
+
+.footer-inner{
+
+max-width:1300px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:26px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-brand h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+margin-bottom:4px;
+
+color:#2d2118;
+
+}
+
+.footer-brand p{
+
+font-size:.92rem;
+
+color:#5e4430;
+
+}
+
+.footer-links{
+
+display:flex;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+font-size:.9rem;
+
+font-weight:600;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+background:
+rgba(255,248,239,.45);
+
+color:#3d2a1f;
+
+}
+
+.footer-copy{
+
+text-align:right;
+
+}
+
+.footer-copy p{
+
+font-style:italic;
+
+font-size:.92rem;
+
+margin-bottom:5px;
+
+color:#4d3726;
+
+}
+
+.footer-copy span{
+
+font-size:.8rem;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#74533a;
+
+}
+
+@media(max-width:900px){
+
+.content-inner{
+
+padding:50px 34px;
+
+}
+
+.chapter-nav-inner{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.chapter-navigation a{
+
+text-align:center;
+
+}
+
+.footer-inner{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-copy{
+
+text-align:left;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Small Enough to Hear Him
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="about.html">About</a>
+
+</div>
+
+</nav>
+
+<section class="chapter-hero">
+
+<div class="chapter-meta">
+Chapter Fourteen
+</div>
+
+<h1>
+Staying Near the Feet of Jesus
+</h1>
+
+<p class="chapter-description">
+Learning the importance of remaining close to Jesus above every distraction.
+</p>
+
+</section>
+
+<section class="chapter-content">
+
+<div class="content-inner">
+
+<p>
+Life becomes noisy very quickly.
+</p>
+
+<p>
+Responsibilities increase. Expectations grow. Worries compete for attention. Many hearts slowly become exhausted trying to carry too much while remaining spiritually distant from the very presence that brings peace.
+</p>
+
+<p>
+Jesus never intended for people to live disconnected from Him.
+</p>
+
+<div class="pull-quote">
+
+<h2>
+“Peace is found
+near the feet of Jesus.”
+</h2>
+
+</div>
+
+<p>
+Scripture tells the story of Mary sitting at the feet of Jesus while Martha became overwhelmed with many responsibilities. Martha worked hard. Martha cared deeply. Yet distraction slowly stole attention away from the most important thing happening within the room.
+</p>
+
+<p>
+Mary chose nearness.
+</p>
+
+<p>
+Luke 10:42 says:
+</p>
+
+<p>
+“But one thing is needful: and Mary hath chosen that good part, which shall not be taken away from her.”
+</p>
+
+<p>
+Those words still speak powerfully today.
+</p>
+
+<p>
+Many things may feel urgent.
+Only one thing remains truly essential.
+</p>
+
+<p>
+The presence of Jesus changes hearts differently than endless striving ever can.
+</p>
+
+<p>
+Many believers unintentionally become spiritually tired because they continue serving without slowing down enough to simply remain near Jesus. Ministry without intimacy eventually becomes exhausting. Service without closeness eventually feels heavy.
+</p>
+
+<p>
+A willing vessel must stay near the source.
+</p>
+
+<p>
+Prayer is more than routine words.
+Worship is more than music.
+Scripture is more than information.
+</p>
+
+<p>
+Relationship with Jesus brings life to every part of faith.
+</p>
+
+<p>
+Remaining near Jesus creates clarity within confusion. His presence steadies anxious hearts. His voice quiets fear. His peace settles restless thoughts.
+</p>
+
+<p>
+Many distractions are not openly sinful. Certain distractions simply become loud enough to pull attention away from intimacy with God.
+</p>
+
+<p>
+Constant noise weakens spiritual attentiveness.
+Stillness strengthens listening.
+</p>
+
+<p>
+Jesus continually invited people closer.
+Closer than surface religion.
+Closer than performance.
+Closer than routine without relationship.
+</p>
+
+<p>
+Nearness changes people.
+</p>
+
+<p>
+Peter walked on water while focused on Jesus.
+Fear overtook him once distraction replaced focus.
+</p>
+
+<p>
+The same pattern still affects hearts today.
+</p>
+
+<p>
+Fear grows louder when eyes drift away from Jesus. Anxiety grows heavier when intimacy becomes neglected. Weariness deepens when hearts attempt to carry burdens without resting near His presence.
+</p>
+
+<p>
+A willing vessel learns the importance of returning daily to the feet of Jesus.
+</p>
+
+<p>
+Not for performance.
+Not for appearance.
+Simply for closeness.
+</p>
+
+<p>
+Some of the deepest moments with God happen quietly. No crowds. No applause. Just surrendered hearts resting within His presence.
+</p>
+
+<p>
+Small enough to hear Him means staying close enough to recognize that nothing in this world matters more than remaining near Jesus.
+</p>
+
+</div>
+
+</section>
+
+<section class="chapter-navigation">
+
+<div class="chapter-nav-inner">
+
+<a href="chapter13.html">
+← Previous Chapter
+</a>
+
+<a href="chapter15.html">
+Next Chapter →
+</a>
+
+</div>
+
+</section>
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h2>
+Small Enough to Hear Him
+</h2>
+
+<p>
+Walking quietly with Jesus.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="preface.html">Preface</a>
+
+</div>
+
+<div class="footer-copy">
+
+<p>
+No big name. Just a willing vessel.
+</p>
+
+<span>
+© Bradley Hobbs
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
