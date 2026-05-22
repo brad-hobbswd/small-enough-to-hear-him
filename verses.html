@@ -1,0 +1,832 @@
+<!-- verses.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Scriptures | Small Enough to Hear Him
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--bg:#f5ead7;
+--card:#fffaf2;
+
+--gold:#c89a56;
+--gold-soft:#ddb97d;
+
+--brown:#5b4130;
+--brown-dark:#2d2118;
+
+--text:#2c251f;
+--text-soft:#6f6459;
+
+--border:rgba(58,40,28,.10);
+
+--shadow:
+0 24px 55px rgba(58,40,28,.08);
+
+}
+
+body{
+
+background:var(--bg);
+
+font-family:'Inter',sans-serif;
+
+color:var(--text);
+
+line-height:2;
+
+overflow-x:hidden;
+
+}
+
+nav{
+
+width:100%;
+
+padding:24px 7%;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+backdrop-filter:blur(14px);
+
+background:
+rgba(245,234,215,.82);
+
+border-bottom:
+1px solid rgba(58,40,28,.05);
+
+}
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+font-weight:700;
+
+color:var(--brown-dark);
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+flex-wrap:wrap;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+font-size:.92rem;
+
+font-weight:600;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+color:var(--brown);
+
+transition:.3s ease;
+
+}
+
+.nav-links a:hover{
+
+background:
+rgba(255,255,255,.55);
+
+}
+
+.hero{
+
+padding:
+130px 7% 60px;
+
+max-width:1000px;
+
+margin:auto;
+
+position:relative;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:30px;
+right:30px;
+
+width:240px;
+height:240px;
+
+border-radius:50%;
+
+background:
+rgba(221,185,125,.16);
+
+filter:blur(60px);
+
+z-index:-1;
+
+}
+
+.label{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+background:
+rgba(255,255,255,.5);
+
+border:
+1px solid rgba(58,40,28,.06);
+
+font-size:.8rem;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:26px;
+
+}
+
+.hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:
+clamp(4rem,8vw,6rem);
+
+line-height:.95;
+
+max-width:760px;
+
+margin-bottom:26px;
+
+color:var(--brown-dark);
+
+}
+
+.hero p{
+
+max-width:760px;
+
+font-size:1.08rem;
+
+line-height:1.95;
+
+color:var(--text-soft);
+
+}
+
+.scripture-section{
+
+padding:
+10px 7% 100px;
+
+}
+
+.scripture-grid{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:24px;
+
+}
+
+.scripture-card{
+
+background:var(--card);
+
+padding:40px 34px;
+
+border-radius:32px;
+
+border:
+1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.scripture-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:
+linear-gradient(
+to right,
+var(--gold),
+var(--gold-soft)
+);
+
+}
+
+.scripture-card h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.1rem;
+
+line-height:1.1;
+
+margin-bottom:18px;
+
+color:var(--brown-dark);
+
+}
+
+.scripture-card p{
+
+font-size:1rem;
+
+line-height:1.9;
+
+color:var(--text-soft);
+
+margin-bottom:22px;
+
+}
+
+.reference{
+
+display:inline-flex;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+background:
+rgba(221,185,125,.16);
+
+font-size:.82rem;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:var(--brown);
+
+}
+
+.site-footer{
+
+padding:34px 7% 28px;
+
+background:
+linear-gradient(
+135deg,
+#cfa36d 0%,
+#e2c18d 45%,
+#b9854f 100%
+);
+
+}
+
+.footer-inner{
+
+max-width:1300px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:24px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-brand h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+margin-bottom:4px;
+
+color:#2d2118;
+
+}
+
+.footer-brand p{
+
+font-size:.92rem;
+
+color:#5e4430;
+
+}
+
+.footer-links{
+
+display:flex;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+font-size:.9rem;
+
+font-weight:600;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+background:
+rgba(255,248,239,.45);
+
+color:#3d2a1f;
+
+}
+
+.footer-copy{
+
+text-align:right;
+
+}
+
+.footer-copy p{
+
+font-style:italic;
+
+font-size:.92rem;
+
+margin-bottom:5px;
+
+color:#4d3726;
+
+}
+
+.footer-copy span{
+
+font-size:.8rem;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#74533a;
+
+}
+
+@media(max-width:900px){
+
+.footer-inner{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-copy{
+
+text-align:left;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Small Enough to Hear Him
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="label">
+Scriptures
+</div>
+
+<h1>
+Verses That Shaped the Journey
+</h1>
+
+<p>
+Every chapter throughout this book was rooted within Scripture, surrender, humility, quiet faithfulness, and the never ending grace of Jesus.
+</p>
+
+</section>
+
+<section class="scripture-section">
+
+<div class="scripture-grid">
+
+<div class="scripture-card">
+
+<h2>
+He Must Increase
+</h2>
+
+<p>
+“He must increase, but I must decrease.”
+</p>
+
+<div class="reference">
+John 3:30
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+The Name Above Every Name
+</h2>
+
+<p>
+“Neither is there salvation in any other: for there is none other name under heaven given among men, whereby we must be saved.”
+</p>
+
+<div class="reference">
+Acts 4:12
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Quiet Prayer
+</h2>
+
+<p>
+“But thou, when thou prayest, enter into thy closet, and when thou hast shut thy door, pray to thy Father which is in secret.”
+</p>
+
+<div class="reference">
+Matthew 6:6
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Strength Within Weakness
+</h2>
+
+<p>
+“For when I am weak, then am I strong.”
+</p>
+
+<div class="reference">
+2 Corinthians 12:10
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Hearing His Voice
+</h2>
+
+<p>
+“My sheep hear my voice, and I know them, and they follow me.”
+</p>
+
+<div class="reference">
+John 10:27
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+The Good Part
+</h2>
+
+<p>
+“But one thing is needful: and Mary hath chosen that good part, which shall not be taken away from her.”
+</p>
+
+<div class="reference">
+Luke 10:42
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+A Willing Yes
+</h2>
+
+<p>
+“Be it unto me according to thy word.”
+</p>
+
+<div class="reference">
+Luke 1:38
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Every Tear Seen
+</h2>
+
+<p>
+“Put thou my tears into thy bottle: are they not in thy book?”
+</p>
+
+<div class="reference">
+Psalm 56:8
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Jesus Wept
+</h2>
+
+<p>
+“Jesus wept.”
+</p>
+
+<div class="reference">
+John 11:35
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+The Reward of Humility
+</h2>
+
+<p>
+“Humility is the fear of the Lord; its wages are riches and honor and life.”
+</p>
+
+<div class="reference">
+Proverbs 22:4
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Grace Made the Difference
+</h2>
+
+<p>
+“But by the grace of God I am what I am: and his grace which was bestowed upon me was not in vain.”
+</p>
+
+<div class="reference">
+1 Corinthians 15:10
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Lifted in Due Time
+</h2>
+
+<p>
+“Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time.”
+</p>
+
+<div class="reference">
+1 Peter 5:6
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Wholehearted Diligence
+</h2>
+
+<p>
+“Meditate upon these things; give thyself wholly to them; that thy profiting may appear to all.”
+</p>
+
+<div class="reference">
+1 Timothy 4:15
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Walking Humbly
+</h2>
+
+<p>
+“He hath shewed thee, O man, what is good; and what doth the Lord require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?”
+</p>
+
+<div class="reference">
+Micah 6:8
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+The Humble Heart
+</h2>
+
+<p>
+“To this man will I look, even to him that is poor and of a contrite spirit, and trembleth at my word.”
+</p>
+
+<div class="reference">
+Isaiah 66:2
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+Clothed With Humility
+</h2>
+
+<p>
+“Be clothed with humility: for God resisteth the proud, and giveth grace to the humble.”
+</p>
+
+<div class="reference">
+1 Peter 5:5
+</div>
+
+</div>
+
+<div class="scripture-card">
+
+<h2>
+A Servant’s Heart
+</h2>
+
+<p>
+“For even the Son of man came not to be ministered unto, but to minister, and to give his life a ransom for many.”
+</p>
+
+<div class="reference">
+Mark 10:45
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h2>
+Small Enough to Hear Him
+</h2>
+
+<p>
+Walking quietly with Jesus.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="footer-copy">
+
+<p>
+No big name. Just a willing vessel.
+</p>
+
+<span>
+© Bradley Hobbs
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
