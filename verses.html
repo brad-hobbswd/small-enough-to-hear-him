@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 
 <meta
@@ -42,7 +43,7 @@ box-sizing:border-box;
 --border:rgba(58,40,28,.10);
 
 --shadow:
-0 24px 55px rgba(58,40,28,.08);
+0 14px 34px rgba(58,40,28,.06);
 
 }
 
@@ -54,17 +55,19 @@ font-family:'Inter',sans-serif;
 
 color:var(--text);
 
-line-height:2;
+line-height:1.68;
 
 overflow-x:hidden;
 
 }
 
+/* NAV */
+
 nav{
 
 width:100%;
 
-padding:24px 7%;
+padding:18px 6%;
 
 display:flex;
 
@@ -80,7 +83,7 @@ z-index:1000;
 backdrop-filter:blur(14px);
 
 background:
-rgba(245,234,215,.82);
+rgba(245,234,215,.84);
 
 border-bottom:
 1px solid rgba(58,40,28,.05);
@@ -91,7 +94,7 @@ border-bottom:
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.75rem;
 
 font-weight:700;
 
@@ -105,7 +108,7 @@ display:flex;
 
 align-items:center;
 
-gap:14px;
+gap:8px;
 
 flex-wrap:wrap;
 
@@ -115,17 +118,17 @@ flex-wrap:wrap;
 
 text-decoration:none;
 
-font-size:.92rem;
+font-size:.82rem;
 
 font-weight:600;
 
-padding:10px 16px;
+padding:8px 13px;
 
 border-radius:999px;
 
 color:var(--brown);
 
-transition:.3s ease;
+transition:.25s ease;
 
 }
 
@@ -136,12 +139,15 @@ rgba(255,255,255,.55);
 
 }
 
+/* HERO */
+
 .hero{
 
 padding:
-130px 7% 60px;
+42px 6%
+24px;
 
-max-width:1000px;
+max-width:980px;
 
 margin:auto;
 
@@ -155,18 +161,18 @@ content:"";
 
 position:absolute;
 
-top:30px;
-right:30px;
+top:10px;
+right:20px;
 
-width:240px;
-height:240px;
+width:160px;
+height:160px;
 
 border-radius:50%;
 
 background:
-rgba(221,185,125,.16);
+rgba(221,185,125,.12);
 
-filter:blur(60px);
+filter:blur(42px);
 
 z-index:-1;
 
@@ -178,7 +184,7 @@ display:inline-flex;
 
 align-items:center;
 
-padding:10px 18px;
+padding:8px 14px;
 
 border-radius:999px;
 
@@ -188,7 +194,7 @@ rgba(255,255,255,.5);
 border:
 1px solid rgba(58,40,28,.06);
 
-font-size:.8rem;
+font-size:.68rem;
 
 font-weight:700;
 
@@ -198,7 +204,7 @@ text-transform:uppercase;
 
 color:var(--gold);
 
-margin-bottom:26px;
+margin-bottom:14px;
 
 }
 
@@ -207,13 +213,13 @@ margin-bottom:26px;
 font-family:'Cormorant Garamond',serif;
 
 font-size:
-clamp(4rem,8vw,6rem);
+clamp(2.8rem,5vw,4.8rem);
 
-line-height:.95;
+line-height:.92;
 
 max-width:760px;
 
-margin-bottom:26px;
+margin-bottom:16px;
 
 color:var(--brown-dark);
 
@@ -221,20 +227,23 @@ color:var(--brown-dark);
 
 .hero p{
 
-max-width:760px;
+max-width:620px;
 
-font-size:1.08rem;
+font-size:.94rem;
 
-line-height:1.95;
+line-height:1.72;
 
 color:var(--text-soft);
 
 }
 
+/* SCRIPTURES */
+
 .scripture-section{
 
 padding:
-10px 7% 100px;
+0 6%
+46px;
 
 }
 
@@ -247,9 +256,9 @@ margin:auto;
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(320px,1fr));
+repeat(auto-fit,minmax(260px,1fr));
 
-gap:24px;
+gap:18px;
 
 }
 
@@ -257,9 +266,9 @@ gap:24px;
 
 background:var(--card);
 
-padding:40px 34px;
+padding:24px 22px;
 
-border-radius:32px;
+border-radius:22px;
 
 border:
 1px solid var(--border);
@@ -269,6 +278,14 @@ box-shadow:var(--shadow);
 position:relative;
 
 overflow:hidden;
+
+transition:.28s ease;
+
+}
+
+.scripture-card:hover{
+
+transform:translateY(-4px);
 
 }
 
@@ -282,7 +299,7 @@ top:0;
 left:0;
 
 width:100%;
-height:4px;
+height:3px;
 
 background:
 linear-gradient(
@@ -297,11 +314,11 @@ var(--gold-soft)
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2.1rem;
+font-size:1.7rem;
 
-line-height:1.1;
+line-height:1.08;
 
-margin-bottom:18px;
+margin-bottom:14px;
 
 color:var(--brown-dark);
 
@@ -309,13 +326,13 @@ color:var(--brown-dark);
 
 .scripture-card p{
 
-font-size:1rem;
+font-size:.9rem;
 
-line-height:1.9;
+line-height:1.7;
 
 color:var(--text-soft);
 
-margin-bottom:22px;
+margin-bottom:18px;
 
 }
 
@@ -323,14 +340,14 @@ margin-bottom:22px;
 
 display:inline-flex;
 
-padding:8px 14px;
+padding:7px 12px;
 
 border-radius:999px;
 
 background:
-rgba(221,185,125,.16);
+rgba(221,185,125,.14);
 
-font-size:.82rem;
+font-size:.68rem;
 
 font-weight:700;
 
@@ -342,9 +359,13 @@ color:var(--brown);
 
 }
 
+/* FOOTER */
+
 .site-footer{
 
-padding:34px 7% 28px;
+margin-top:10px;
+
+padding:24px 6% 18px;
 
 background:
 linear-gradient(
@@ -354,11 +375,14 @@ linear-gradient(
 #b9854f 100%
 );
 
+border-top:
+1px solid rgba(58,40,28,.10);
+
 }
 
 .footer-inner{
 
-max-width:1300px;
+max-width:1200px;
 
 margin:auto;
 
@@ -367,7 +391,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 
-gap:24px;
+gap:14px;
 
 flex-wrap:wrap;
 
@@ -377,9 +401,9 @@ flex-wrap:wrap;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.6rem;
 
-margin-bottom:4px;
+margin-bottom:2px;
 
 color:#2d2118;
 
@@ -387,7 +411,7 @@ color:#2d2118;
 
 .footer-brand p{
 
-font-size:.92rem;
+font-size:.78rem;
 
 color:#5e4430;
 
@@ -397,7 +421,7 @@ color:#5e4430;
 
 display:flex;
 
-gap:12px;
+gap:8px;
 
 flex-wrap:wrap;
 
@@ -407,18 +431,27 @@ flex-wrap:wrap;
 
 text-decoration:none;
 
-font-size:.9rem;
+font-size:.76rem;
 
 font-weight:600;
 
-padding:10px 16px;
+padding:7px 11px;
 
 border-radius:999px;
 
 background:
-rgba(255,248,239,.45);
+rgba(255,248,239,.38);
 
 color:#3d2a1f;
+
+transition:.25s ease;
+
+}
+
+.footer-links a:hover{
+
+background:
+rgba(255,248,239,.82);
 
 }
 
@@ -430,11 +463,9 @@ text-align:right;
 
 .footer-copy p{
 
-font-style:italic;
+font-size:.76rem;
 
-font-size:.92rem;
-
-margin-bottom:5px;
+margin-bottom:2px;
 
 color:#4d3726;
 
@@ -442,7 +473,7 @@ color:#4d3726;
 
 .footer-copy span{
 
-font-size:.8rem;
+font-size:.64rem;
 
 letter-spacing:1px;
 
@@ -452,7 +483,81 @@ color:#74533a;
 
 }
 
-@media(max-width:900px){
+/* MOBILE */
+
+@media(max-width:760px){
+
+nav{
+
+padding:16px 5%;
+
+}
+
+.logo{
+
+font-size:1.55rem;
+
+}
+
+.hero{
+
+padding:
+32px 5%
+20px;
+
+}
+
+.hero h1{
+
+font-size:3.1rem;
+
+}
+
+.hero p{
+
+font-size:.9rem;
+
+}
+
+.scripture-section{
+
+padding:
+0 5%
+38px;
+
+}
+
+.scripture-grid{
+
+grid-template-columns:1fr;
+
+gap:16px;
+
+}
+
+.scripture-card{
+
+padding:22px 18px;
+
+border-radius:18px;
+
+}
+
+.scripture-card h2{
+
+font-size:1.45rem;
+
+}
+
+.scripture-card p{
+
+font-size:.88rem;
+
+line-height:1.66;
+
+margin-bottom:16px;
+
+}
 
 .footer-inner{
 
@@ -471,6 +576,7 @@ text-align:left;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -503,7 +609,13 @@ Verses That Shaped the Journey
 </h1>
 
 <p>
-Every chapter throughout this book was rooted within Scripture, surrender, humility, quiet faithfulness, and the never ending grace of Jesus.
+
+Every chapter throughout this book was rooted within Scripture,
+surrender,
+humility,
+quiet faithfulness,
+and the never ending grace of Jesus.
+
 </p>
 
 </section>
