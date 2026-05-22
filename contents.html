@@ -691,17 +691,238 @@ Read Chapter →
 
 </section>
 
-<footer>
+<!-- REPLACE YOUR CURRENT FOOTER IN contents.html WITH THIS -->
 
-<h3>
-Still Small Enough to Hear Him
-</h3>
+<footer class="site-footer">
+
+<div class="footer-glow"></div>
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h2>
+Small Enough to Hear Him
+</h2>
 
 <p>
-© Bradley Hobbs
+No big name. Just a willing vessel.
 </p>
 
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="preface.html">Preface</a>
+<a href="dedication.html">Dedication</a>
+
+</div>
+
+<div class="footer-copy">
+
+<p>
+Still small enough to hear Him.
+</p>
+
+<span>
+© Bradley Hobbs
+</span>
+
+</div>
+
+</div>
+
 </footer>
+
+<style>
+
+.site-footer{
+
+position:relative;
+
+margin-top:70px;
+
+padding:34px 7% 28px;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#cfa36d 0%,
+#e2c18d 45%,
+#b9854f 100%
+);
+
+border-top:
+1px solid rgba(58,40,28,.10);
+
+}
+
+.footer-glow{
+
+position:absolute;
+
+top:-80px;
+right:-80px;
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+background:
+rgba(255,248,235,.24);
+
+filter:blur(40px);
+
+}
+
+.footer-inner{
+
+position:relative;
+z-index:2;
+
+max-width:1300px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:26px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-brand h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.1rem;
+
+line-height:1;
+
+font-weight:700;
+
+margin-bottom:5px;
+
+color:#2d2118;
+
+}
+
+.footer-brand p{
+
+font-size:.94rem;
+
+letter-spacing:.2px;
+
+color:#5e4430;
+
+}
+
+.footer-links{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+font-size:.9rem;
+
+font-weight:600;
+
+color:#3d2a1f;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+background:
+rgba(255,250,242,.45);
+
+backdrop-filter:blur(8px);
+
+transition:.3s ease;
+
+}
+
+.footer-links a:hover{
+
+background:
+rgba(255,250,242,.85);
+
+transform:translateY(-2px);
+
+}
+
+.footer-copy{
+
+text-align:right;
+
+}
+
+.footer-copy p{
+
+font-size:.92rem;
+
+font-style:italic;
+
+margin-bottom:5px;
+
+color:#4d3726;
+
+}
+
+.footer-copy span{
+
+font-size:.8rem;
+
+letter-spacing:1.5px;
+
+text-transform:uppercase;
+
+color:#74533a;
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.footer-inner{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:22px;
+
+}
+
+.footer-copy{
+
+text-align:left;
+
+}
+
+}
+
+</style>
 
 </body>
 </html>
