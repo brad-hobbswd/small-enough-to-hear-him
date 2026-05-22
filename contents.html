@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Contents | Small Enough to Hear Him
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--bg-main:#f5ead7;
+--bg-alt:#ead9bf;
+
+--cream:#f8f1e4;
+--gold:#c89a56;
+--gold-soft:#ddb97d;
+
+--brown:#5e4330;
+--brown-dark:#36261c;
+
+--text:#2a241f;
+--text-soft:#6d6257;
+
+--card:#fffaf1;
+--border:rgba(94,67,48,.12);
+
+--shadow:0 18px 40px rgba(54,38,28,.08);
+
+}
+
+body{
+
+background:var(--bg-main);
+color:var(--text);
+
+font-family:'Inter',sans-serif;
+
+line-height:1.9;
+
+overflow-x:hidden;
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:75vh;
+
+padding:120px 8% 90px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+position:relative;
+
+background:
+linear-gradient(rgba(245,234,215,.78),
+rgba(245,234,215,.88)),
+
+url("book-banner.jpg");
+
+background-size:cover;
+background-position:center;
+
+text-align:center;
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:0;
+
+width:100%;
+height:120px;
+
+background:
+linear-gradient(to top,
+var(--bg-main),
+transparent);
+
+}
+
+.hero-content{
+
+position:relative;
+z-index:2;
+
+max-width:900px;
+
+}
+
+.hero-sub{
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+font-size:.82rem;
+
+color:var(--gold);
+
+margin-bottom:22px;
+
+font-weight:600;
+
+}
+
+.hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:clamp(4rem,9vw,7.5rem);
+
+line-height:.92;
+
+font-weight:700;
+
+margin-bottom:24px;
+
+color:var(--brown-dark);
+
+}
+
+.hero p{
+
+font-size:1.15rem;
+
+max-width:720px;
+
+margin:auto;
+
+color:var(--text-soft);
+
+}
+
+/* INTRO */
+
+.intro{
+
+padding:90px 8%;
+
+max-width:1050px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.intro h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:3.4rem;
+
+margin-bottom:24px;
+
+color:var(--brown-dark);
+
+}
+
+.intro p{
+
+font-size:1.08rem;
+
+color:var(--text-soft);
+
+}
+
+/* CARDS */
+
+.contents{
+
+padding:30px 8% 120px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:28px;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+.card{
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:28px;
+
+padding:38px 34px;
+
+box-shadow:var(--shadow);
+
+transition:.35s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:
+linear-gradient(to right,
+var(--gold),
+var(--gold-soft));
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 26px 55px rgba(54,38,28,.12);
+
+}
+
+.chapter{
+
+font-size:.78rem;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+.card h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+line-height:1.15;
+
+margin-bottom:18px;
+
+color:var(--brown-dark);
+
+}
+
+.card p{
+
+font-size:.98rem;
+
+color:var(--text-soft);
+
+margin-bottom:26px;
+
+}
+
+.card a{
+
+display:inline-flex;
+
+align-items:center;
+gap:10px;
+
+text-decoration:none;
+
+color:var(--brown-dark);
+
+font-weight:600;
+
+font-size:.95rem;
+
+transition:.3s ease;
+
+}
+
+.card a:hover{
+
+color:var(--gold);
+
+transform:translateX(5px);
+
+}
+
+/* QUOTE */
+
+.quote{
+
+padding:120px 8%;
+
+background:var(--bg-alt);
+
+text-align:center;
+
+}
+
+.quote h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:clamp(2.8rem,5vw,5rem);
+
+line-height:1.1;
+
+max-width:900px;
+
+margin:auto;
+
+color:var(--brown-dark);
+
+}
+
+.quote span{
+
+color:var(--gold);
+
+font-style:italic;
+
+}
+
+/* FOOTER */
+
+footer{
+
+padding:60px 8%;
+
+text-align:center;
+
+background:#efe0c7;
+
+}
+
+footer h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+color:var(--brown-dark);
+
+}
+
+footer p{
+
+color:var(--text-soft);
+
+font-size:.95rem;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+.grid{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:760px){
+
+.hero{
+
+padding:110px 7% 70px;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.card{
+
+padding:34px 28px;
+
+}
+
+.intro h2{
+
+font-size:2.6rem;
+
+}
+
+.quote{
+
+padding:90px 7%;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-sub">
+Bradley Hobbs
+</div>
+
+<h1>
+Small Enough<br>
+to Hear Him
+</h1>
+
+<p>
+No big name. Just a willing vessel. A quiet journey through surrender,
+hidden faithfulness, listening, and learning to stay close enough
+to hear the voice of Jesus.
+</p>
+
+</div>
+
+</section>
+
+<section class="intro">
+
+<h2>
+Book Contents
+</h2>
+
+<p>
+Each chapter walks through hidden seasons, quiet surrender,
+wilderness roads, and the beauty of remaining willing in the hands
+of God. Written with a reflective and immersive tone, this journey
+invites hearts back toward stillness, humility, and the voice of Jesus.
+</p>
+
+</section>
+
+<section class="contents">
+
+<div class="grid">
+
+<div class="card">
+<div class="chapter">Chapter One</div>
+<h3>Hidden Places and Holy Preparation</h3>
+<p>
+Discovering how God prepares hearts through hidden seasons long before visible purpose arrives.
+</p>
+<a href="chapter1.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Two</div>
+<h3>Learning the Language of Listening</h3>
+<p>
+Slowing down enough to recognize the quiet ways Jesus still speaks.
+</p>
+<a href="chapter2.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Three</div>
+<h3>The Danger of Wanting a Name</h3>
+<p>
+A reflection on humility, recognition, and remaining centered upon Jesus.
+</p>
+<a href="chapter3.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Four</div>
+<h3>Faithfulness When Nobody Sees</h3>
+<p>
+Finding beauty within hidden obedience and unseen surrender.
+</p>
+<a href="chapter4.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Five</div>
+<h3>The Wilderness Was Not Empty</h3>
+<p>
+Understanding how God still moves within waiting and uncertain seasons.
+</p>
+<a href="chapter5.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Six</div>
+<h3>The Weight of Hidden Tears</h3>
+<p>
+A reminder that Jesus sees every hidden burden and every quiet ache.
+</p>
+<a href="chapter6.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Seven</div>
+<h3>Less of Me, More of Jesus</h3>
+<p>
+Learning the freedom found within humility and surrender.
+</p>
+<a href="chapter7.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Eight</div>
+<h3>The Ministry of Remaining Small</h3>
+<p>
+Exploring the quiet strength of serving without needing recognition.
+</p>
+<a href="chapter8.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Nine</div>
+<h3>Prepared in Season and Out</h3>
+<p>
+Growing roots through daily faithfulness and spiritual preparation.
+</p>
+<a href="chapter9.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Ten</div>
+<h3>There Is a Name I Know</h3>
+<p>
+Holding tightly to the name of Jesus through every storm and valley.
+</p>
+<a href="chapter10.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Eleven</div>
+<h3>When Heaven Feels Silent</h3>
+<p>
+Trusting the presence of God even during seasons that feel quiet.
+</p>
+<a href="chapter11.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Twelve</div>
+<h3>The Battle Between Noise and Stillness</h3>
+<p>
+Protecting peace and creating space to hear the voice of Jesus.
+</p>
+<a href="chapter12.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Thirteen</div>
+<h3>Serving Without Being Seen</h3>
+<p>
+Remaining faithful within hidden acts of love and quiet obedience.
+</p>
+<a href="chapter13.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Fourteen</div>
+<h3>The Weight of Carrying a Name</h3>
+<p>
+Releasing pressure, labels, and expectations at the feet of Jesus.
+</p>
+<a href="chapter14.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Fifteen</div>
+<h3>The Strength Found in Surrender</h3>
+<p>
+Discovering peace through open hands and deeper trust in God.
+</p>
+<a href="chapter15.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Sixteen</div>
+<h3>When Jesus Whispers Directions</h3>
+<p>
+Following the gentle leading of God through ordinary moments.
+</p>
+<a href="chapter16.html">
+Read Chapter →
+</a>
+</div>
+
+<div class="card">
+<div class="chapter">Chapter Seventeen</div>
+<h3>Returning to the Feet of Jesus</h3>
+<p>
+Coming back to stillness, worship, and closeness with Christ.
+</p>
+<a href="chapter17.html">
+Read Chapter →
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="quote">
+
+<h2>
+“No big name.<br>
+<span>Just a willing vessel.</span>”
+</h2>
+
+</section>
+
+<footer>
+
+<h3>
+Still Small Enough to Hear Him
+</h3>
+
+<p>
+© Bradley Hobbs
+</p>
+
+</footer>
+
+</body>
+</html>
