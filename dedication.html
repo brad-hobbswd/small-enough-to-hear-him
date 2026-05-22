@@ -1,56 +1,173 @@
 <!-- dedication.html -->
 
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 
 <meta
-
 name="viewport"
-
 content="width=device-width, initial-scale=1.0">
 
 <title>
-
 Dedication | Small Enough to Hear Him
-
 </title>
 
 <link
-
 href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-
 rel="stylesheet">
 
 <style>
 
-body{
-
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-background:#f5ead7;
+:root{
 
-font-family:'Inter',sans-serif;
+--bg:#f5ead7;
+--card:#fffaf2;
 
-color:#2c251f;
+--gold:#c89a56;
+--gold-soft:#ddb97d;
 
-line-height:1.95;
+--brown:#5b4130;
+--brown-dark:#2d2118;
+
+--text:#2c251f;
+--text-soft:#6f6459;
+
+--border:rgba(58,40,28,.10);
+
+--shadow:
+0 14px 34px rgba(58,40,28,.06);
 
 }
 
+body{
+
+background:var(--bg);
+
+font-family:'Inter',sans-serif;
+
+color:var(--text);
+
+line-height:1.68;
+
+overflow-x:hidden;
+
+}
+
+/* NAVIGATION */
+
+nav{
+
+width:100%;
+
+padding:18px 6%;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+backdrop-filter:blur(14px);
+
+background:
+rgba(245,234,215,.84);
+
+border-bottom:
+1px solid rgba(58,40,28,.05);
+
+}
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.75rem;
+
+font-weight:700;
+
+color:var(--brown-dark);
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+font-size:.82rem;
+
+font-weight:600;
+
+padding:8px 13px;
+
+border-radius:999px;
+
+color:var(--brown);
+
+transition:.25s ease;
+
+}
+
+.nav-links a:hover{
+
+background:
+rgba(255,255,255,.55);
+
+}
+
+/* PAGE */
+
 .wrapper{
 
-max-width:900px;
+max-width:920px;
 
 margin:auto;
 
-padding:110px 7%;
+padding:
+42px 6%
+50px;
 
 text-align:center;
+
+}
+
+.page-label{
+
+font-size:.7rem;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+font-weight:700;
+
+color:var(--gold);
+
+margin-bottom:10px;
 
 }
 
@@ -59,38 +176,80 @@ h1{
 font-family:'Cormorant Garamond',serif;
 
 font-size:
+clamp(2.8rem,5vw,4.8rem);
 
-clamp(4rem,7vw,6rem);
+line-height:.92;
 
-line-height:.95;
+margin-bottom:18px;
 
-margin-bottom:40px;
+color:var(--brown-dark);
 
-color:#2d2118;
+}
+
+.page-intro{
+
+max-width:620px;
+
+margin:
+0 auto 24px;
+
+font-size:.94rem;
+
+line-height:1.72;
+
+color:var(--text-soft);
 
 }
 
 .card{
 
-background:#fffaf2;
+background:var(--card);
 
-padding:70px 55px;
+padding:28px 24px;
 
-border-radius:34px;
+border-radius:22px;
 
-box-shadow:
+border:
+1px solid var(--border);
 
-0 20px 50px rgba(58,40,28,.08);
+box-shadow:var(--shadow);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:3px;
+
+background:
+linear-gradient(
+to right,
+var(--gold),
+var(--gold-soft)
+);
 
 }
 
 .card p{
 
-font-size:1.05rem;
+font-size:.92rem;
 
-margin-bottom:28px;
+line-height:1.72;
 
-color:#6f6459;
+margin-bottom:18px;
+
+color:var(--text-soft);
 
 }
 
@@ -104,39 +263,35 @@ margin-bottom:0;
 
 .site-footer{
 
-margin-top:40px;
-
-padding:34px 7% 28px;
+padding:24px 6% 18px;
 
 background:
-
 linear-gradient(
-
 135deg,
-
 #cfa36d 0%,
-
 #e2c18d 45%,
-
 #b9854f 100%
-
 );
+
+border-top:
+1px solid rgba(58,40,28,.10);
 
 }
 
 .footer-inner{
 
-max-width:1300px;
+max-width:1200px;
 
 margin:auto;
 
 display:flex;
 
+align-items:center;
 justify-content:space-between;
 
-flex-wrap:wrap;
+gap:14px;
 
-gap:24px;
+flex-wrap:wrap;
 
 }
 
@@ -144,9 +299,9 @@ gap:24px;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.6rem;
 
-margin-bottom:4px;
+margin-bottom:2px;
 
 color:#2d2118;
 
@@ -154,7 +309,7 @@ color:#2d2118;
 
 .footer-brand p{
 
-font-size:.92rem;
+font-size:.78rem;
 
 color:#5e4430;
 
@@ -164,7 +319,7 @@ color:#5e4430;
 
 display:flex;
 
-gap:12px;
+gap:8px;
 
 flex-wrap:wrap;
 
@@ -174,19 +329,27 @@ flex-wrap:wrap;
 
 text-decoration:none;
 
-padding:10px 16px;
+font-size:.76rem;
+
+font-weight:600;
+
+padding:7px 11px;
 
 border-radius:999px;
 
 background:
-
-rgba(255,248,239,.45);
-
-font-size:.9rem;
-
-font-weight:600;
+rgba(255,248,239,.38);
 
 color:#3d2a1f;
+
+transition:.25s ease;
+
+}
+
+.footer-links a:hover{
+
+background:
+rgba(255,248,239,.82);
 
 }
 
@@ -198,11 +361,9 @@ text-align:right;
 
 .footer-copy p{
 
-margin-bottom:5px;
+font-size:.76rem;
 
-font-size:.92rem;
-
-font-style:italic;
+margin-bottom:2px;
 
 color:#4d3726;
 
@@ -210,7 +371,7 @@ color:#4d3726;
 
 .footer-copy span{
 
-font-size:.8rem;
+font-size:.64rem;
 
 letter-spacing:1px;
 
@@ -220,34 +381,124 @@ color:#74533a;
 
 }
 
+/* MOBILE */
+
+@media(max-width:760px){
+
+nav{
+
+padding:16px 5%;
+
+}
+
+.logo{
+
+font-size:1.55rem;
+
+}
+
+.wrapper{
+
+padding:
+32px 5%
+40px;
+
+}
+
+h1{
+
+font-size:3.2rem;
+
+}
+
+.page-intro{
+
+font-size:.9rem;
+
+}
+
+.card{
+
+padding:22px 18px;
+
+border-radius:18px;
+
+}
+
+.card p{
+
+font-size:.88rem;
+
+line-height:1.66;
+
+margin-bottom:16px;
+
+}
+
+.footer-inner{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-copy{
+
+text-align:left;
+
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
+<nav>
+
+<div class="logo">
+Small Enough to Hear Him
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="about.html">About</a>
+
+</div>
+
+</nav>
+
 <div class="wrapper">
 
+<div class="page-label">
+Opening Pages
+</div>
+
 <h1>
-
 Dedication
-
 </h1>
+
+<p class="page-intro">
+
+A quiet offering of gratitude, surrender,
+and honor to the One who remained faithful through every season.
+
+</p>
 
 <div class="card">
 
 <p>
 
 To Jesus,
-
 the name above every name,
-
 the One who remained faithful through every hidden season,
-
 every wilderness road,
-
 every unanswered prayer,
-
 and every moment where strength felt small.
 
 </p>
@@ -259,11 +510,8 @@ Thank You for speaking within quiet places when life became loud.
 Thank You for staying near during seasons where understanding felt distant.
 
 Thank You for teaching lessons through waiting,
-
 surrender,
-
 tears,
-
 and grace.
 
 </p>
@@ -271,9 +519,7 @@ and grace.
 <p>
 
 This book was never written for a large name,
-
 recognition,
-
 or applause.
 
 These pages belong to You.
@@ -283,11 +529,8 @@ These pages belong to You.
 <p>
 
 Keep hearts teachable.
-
 Keep spirits willing.
-
 Keep ears attentive.
-
 Keep lives prepared in season and out.
 
 Keep every reader small enough to hear You.
@@ -313,15 +556,11 @@ Just a willing vessel.
 <div class="footer-brand">
 
 <h2>
-
 Small Enough to Hear Him
-
 </h2>
 
 <p>
-
 Walking quietly with Jesus.
-
 </p>
 
 </div>
@@ -329,9 +568,7 @@ Walking quietly with Jesus.
 <div class="footer-links">
 
 <a href="index.html">Home</a>
-
 <a href="contents.html">Contents</a>
-
 <a href="about.html">About</a>
 
 </div>
@@ -339,15 +576,11 @@ Walking quietly with Jesus.
 <div class="footer-copy">
 
 <p>
-
 No big name. Just a willing vessel.
-
 </p>
 
 <span>
-
 © Bradley Hobbs
-
 </span>
 
 </div>
@@ -357,5 +590,4 @@ No big name. Just a willing vessel.
 </footer>
 
 </body>
-
 </html>
