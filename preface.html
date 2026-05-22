@@ -1,46 +1,145 @@
-<!-- preface.html -->
+<!-- UPDATED preface.html MATCHING THE NEWER index.html SPACING + TYPOGRAPHY -->
 
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 
 <meta
-
 name="viewport"
-
 content="width=device-width, initial-scale=1.0">
 
 <title>
-
 Preface | Small Enough to Hear Him
-
 </title>
 
 <link
-
 href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-
 rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--bg:#f5ead7;
+--card:#fffaf2;
+
+--gold:#c89a56;
+--gold-soft:#ddb97d;
+
+--brown:#5b4130;
+--brown-dark:#2d2118;
+
+--text:#2c251f;
+--text-soft:#6f6459;
+
+--border:rgba(58,40,28,.10);
+
+--shadow:
+0 14px 34px rgba(58,40,28,.06);
+
+}
+
 body{
 
-margin:0;
-
-background:#f5ead7;
+background:var(--bg);
 
 font-family:'Inter',sans-serif;
 
-color:#2c251f;
+color:var(--text);
 
-line-height:1.95;
+line-height:1.68;
+
+overflow-x:hidden;
 
 }
+
+/* NAVIGATION */
+
+nav{
+
+width:100%;
+
+padding:18px 6%;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+backdrop-filter:blur(14px);
+
+background:
+rgba(245,234,215,.84);
+
+border-bottom:
+1px solid rgba(58,40,28,.05);
+
+}
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.75rem;
+
+font-weight:700;
+
+color:var(--brown-dark);
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+font-size:.82rem;
+
+font-weight:600;
+
+padding:8px 13px;
+
+border-radius:999px;
+
+color:var(--brown);
+
+transition:.25s ease;
+
+}
+
+.nav-links a:hover{
+
+background:
+rgba(255,255,255,.55);
+
+}
+
+/* PAGE */
 
 .wrapper{
 
@@ -48,7 +147,25 @@ max-width:980px;
 
 margin:auto;
 
-padding:100px 7%;
+padding:
+42px 6%
+50px;
+
+}
+
+.page-label{
+
+font-size:.7rem;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+font-weight:700;
+
+color:var(--gold);
+
+margin-bottom:10px;
 
 }
 
@@ -57,38 +174,85 @@ h1{
 font-family:'Cormorant Garamond',serif;
 
 font-size:
+clamp(2.8rem,5vw,4.8rem);
 
-clamp(4rem,7vw,6rem);
+line-height:.92;
 
-line-height:.95;
+margin-bottom:18px;
 
-margin-bottom:30px;
-
-color:#2d2118;
+color:var(--brown-dark);
 
 }
 
-p{
+.page-intro{
 
-font-size:1.05rem;
+max-width:620px;
 
-margin-bottom:28px;
+font-size:.94rem;
 
-color:#6f6459;
+line-height:1.72;
+
+color:var(--text-soft);
+
+margin-bottom:24px;
 
 }
 
 .card{
 
-background:#fffaf2;
+background:var(--card);
 
-padding:55px 48px;
+padding:28px 24px;
 
-border-radius:34px;
+border-radius:22px;
 
-box-shadow:
+border:
+1px solid var(--border);
 
-0 20px 50px rgba(58,40,28,.08);
+box-shadow:var(--shadow);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:3px;
+
+background:
+linear-gradient(
+to right,
+var(--gold),
+var(--gold-soft)
+);
+
+}
+
+.card p{
+
+font-size:.92rem;
+
+line-height:1.72;
+
+margin-bottom:18px;
+
+color:var(--text-soft);
+
+}
+
+.card p:last-child{
+
+margin-bottom:0;
 
 }
 
@@ -96,39 +260,35 @@ box-shadow:
 
 .site-footer{
 
-margin-top:40px;
-
-padding:34px 7% 28px;
+padding:24px 6% 18px;
 
 background:
-
 linear-gradient(
-
 135deg,
-
 #cfa36d 0%,
-
 #e2c18d 45%,
-
 #b9854f 100%
-
 );
+
+border-top:
+1px solid rgba(58,40,28,.10);
 
 }
 
 .footer-inner{
 
-max-width:1300px;
+max-width:1200px;
 
 margin:auto;
 
 display:flex;
 
+align-items:center;
 justify-content:space-between;
 
-flex-wrap:wrap;
+gap:14px;
 
-gap:24px;
+flex-wrap:wrap;
 
 }
 
@@ -136,9 +296,9 @@ gap:24px;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2rem;
+font-size:1.6rem;
 
-margin-bottom:4px;
+margin-bottom:2px;
 
 color:#2d2118;
 
@@ -146,7 +306,7 @@ color:#2d2118;
 
 .footer-brand p{
 
-font-size:.92rem;
+font-size:.78rem;
 
 color:#5e4430;
 
@@ -156,7 +316,7 @@ color:#5e4430;
 
 display:flex;
 
-gap:12px;
+gap:8px;
 
 flex-wrap:wrap;
 
@@ -166,19 +326,27 @@ flex-wrap:wrap;
 
 text-decoration:none;
 
-padding:10px 16px;
+font-size:.76rem;
+
+font-weight:600;
+
+padding:7px 11px;
 
 border-radius:999px;
 
 background:
-
-rgba(255,248,239,.45);
-
-font-size:.9rem;
-
-font-weight:600;
+rgba(255,248,239,.38);
 
 color:#3d2a1f;
+
+transition:.25s ease;
+
+}
+
+.footer-links a:hover{
+
+background:
+rgba(255,248,239,.82);
 
 }
 
@@ -190,11 +358,9 @@ text-align:right;
 
 .footer-copy p{
 
-margin-bottom:5px;
+font-size:.76rem;
 
-font-size:.92rem;
-
-font-style:italic;
+margin-bottom:2px;
 
 color:#4d3726;
 
@@ -202,7 +368,7 @@ color:#4d3726;
 
 .footer-copy span{
 
-font-size:.8rem;
+font-size:.64rem;
 
 letter-spacing:1px;
 
@@ -212,28 +378,121 @@ color:#74533a;
 
 }
 
+/* MOBILE */
+
+@media(max-width:760px){
+
+nav{
+
+padding:16px 5%;
+
+}
+
+.logo{
+
+font-size:1.55rem;
+
+}
+
+.wrapper{
+
+padding:
+32px 5%
+40px;
+
+}
+
+h1{
+
+font-size:3.2rem;
+
+}
+
+.page-intro{
+
+font-size:.9rem;
+
+}
+
+.card{
+
+padding:22px 18px;
+
+border-radius:18px;
+
+}
+
+.card p{
+
+font-size:.88rem;
+
+line-height:1.66;
+
+margin-bottom:16px;
+
+}
+
+.footer-inner{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-copy{
+
+text-align:left;
+
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
+<nav>
+
+<div class="logo">
+Small Enough to Hear Him
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="about.html">About</a>
+
+</div>
+
+</nav>
+
 <div class="wrapper">
 
+<div class="page-label">
+Opening Pages
+</div>
+
 <h1>
-
 Preface
-
 </h1>
+
+<p class="page-intro">
+
+A quiet beginning written through surrender,
+hidden seasons, prayer, and learning to remain close to Jesus.
+
+</p>
 
 <div class="card">
 
 <p>
 
 Books often begin with a reason,
-
 though some begin with a prayer.
-
 This one began quietly.
 
 </p>
@@ -241,19 +500,18 @@ This one began quietly.
 <p>
 
 No dream ever lived within my heart to build a large name,
-
 create a platform, or become known.
-
 Recognition was never the pursuit.
-
 Attention never felt like the destination.
 
-A different desire continued growing through seasons of prayer,
+</p>
 
+<p>
+
+A different desire continued growing through seasons of prayer,
 waiting, learning, and walking with Jesus.
 
 Deep within my heart,
-
 a simple prayer remained:
 
 Lord, keep me willing.
@@ -263,15 +521,11 @@ Lord, keep me willing.
 <p>
 
 Life has a way of teaching lessons through unexpected places.
-
 Certain truths are learned in hidden seasons where applause never reaches.
 
 Some lessons are discovered during quiet nights filled with prayer.
-
 Others grow through wilderness roads,
-
 unanswered questions,
-
 and moments where heaven feels silent.
 
 </p>
@@ -279,19 +533,15 @@ and moments where heaven feels silent.
 <p>
 
 A simple image continued returning to my heart through those seasons:
-
 an ant.
 
 Small,
-
 often unnoticed,
-
 yet faithful and prepared.
 
 That image slowly became a prayer:
 
 Jesus,
-
 keep me small enough to hear You.
 
 </p>
@@ -301,11 +551,8 @@ keep me small enough to hear You.
 These pages were never written from a place of having every answer.
 
 The journey ahead was written through surrender,
-
 healing,
-
 waiting,
-
 and discovering that Jesus still speaks in quiet places.
 
 </p>
@@ -321,15 +568,11 @@ and discovering that Jesus still speaks in quiet places.
 <div class="footer-brand">
 
 <h2>
-
 Small Enough to Hear Him
-
 </h2>
 
 <p>
-
 Walking quietly with Jesus.
-
 </p>
 
 </div>
@@ -337,9 +580,7 @@ Walking quietly with Jesus.
 <div class="footer-links">
 
 <a href="index.html">Home</a>
-
 <a href="contents.html">Contents</a>
-
 <a href="about.html">About</a>
 
 </div>
@@ -347,15 +588,11 @@ Walking quietly with Jesus.
 <div class="footer-copy">
 
 <p>
-
 Still small enough to hear Him.
-
 </p>
 
 <span>
-
 © Bradley Hobbs
-
 </span>
 
 </div>
@@ -365,5 +602,4 @@ Still small enough to hear Him.
 </footer>
 
 </body>
-
 </html>
