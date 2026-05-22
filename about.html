@@ -1,49 +1,65 @@
 <!-- about.html -->
 
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 
 <meta
+
 name="viewport"
+
 content="width=device-width, initial-scale=1.0">
 
 <title>
+
 About the Author | Small Enough to Hear Him
+
 </title>
 
 <link
+
 href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+
 rel="stylesheet">
 
 <style>
 
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
+
 }
 
 :root{
 
 --bg:#f5ead7;
---bg-alt:#ead9bf;
 
 --card:#fffaf2;
 
 --gold:#c89a56;
+
 --gold-soft:#ddb97d;
 
 --brown:#5b4130;
+
 --brown-dark:#2d2118;
 
 --text:#2c251f;
+
 --text-soft:#6f6459;
 
 --border:rgba(58,40,28,.10);
 
 --shadow:
+
 0 20px 50px rgba(58,40,28,.08);
 
 }
@@ -58,37 +74,13 @@ color:var(--text);
 
 line-height:1.95;
 
-overflow-x:hidden;
-
 }
 
 .hero{
 
-padding:90px 7% 40px;
-
-max-width:1200px;
-
-margin:auto;
+padding:100px 7% 60px;
 
 text-align:center;
-
-}
-
-.hero span{
-
-letter-spacing:4px;
-
-text-transform:uppercase;
-
-font-size:.82rem;
-
-font-weight:700;
-
-color:var(--gold);
-
-display:block;
-
-margin-bottom:22px;
 
 }
 
@@ -97,11 +89,12 @@ margin-bottom:22px;
 font-family:'Cormorant Garamond',serif;
 
 font-size:
-clamp(4rem,8vw,6.5rem);
+
+clamp(4rem,7vw,6rem);
 
 line-height:.95;
 
-margin-bottom:24px;
+margin-bottom:20px;
 
 color:var(--brown-dark);
 
@@ -119,157 +112,123 @@ color:var(--text-soft);
 
 }
 
-.author-section{
+.content{
 
-padding:40px 7% 100px;
+padding:20px 7% 90px;
 
 }
 
-.author-card{
+.content-card{
 
-max-width:1050px;
+max-width:980px;
 
 margin:auto;
 
 background:var(--card);
 
+padding:55px 48px;
+
 border-radius:34px;
 
-padding:55px;
-
 border:
+
 1px solid var(--border);
 
 box-shadow:var(--shadow);
 
-position:relative;
-
-overflow:hidden;
-
 }
 
-.author-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:5px;
-
-background:
-linear-gradient(
-to right,
-var(--gold),
-var(--gold-soft)
-);
-
-}
-
-.author-card h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:3rem;
+.content-card p{
 
 margin-bottom:28px;
 
-color:var(--brown-dark);
-
-}
-
-.author-card p{
-
-font-size:1.03rem;
-
-margin-bottom:28px;
+font-size:1.04rem;
 
 color:var(--text-soft);
 
 }
 
-.quote{
+.content-card p:last-child{
 
-margin-top:40px;
-
-padding:35px;
-
-border-radius:26px;
-
-background:
-linear-gradient(
-135deg,
-rgba(201,154,86,.14),
-rgba(255,255,255,.55)
-);
-
-border:
-1px solid rgba(201,154,86,.18);
+margin-bottom:0;
 
 }
 
-.quote h3{
+.signature{
+
+margin-top:40px;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:2.3rem;
-
-line-height:1.2;
+font-size:2rem;
 
 color:var(--brown-dark);
 
 }
 
-.footer{
+/* FOOTER */
+
+.site-footer{
+
+margin-top:40px;
 
 padding:34px 7% 28px;
 
 background:
+
 linear-gradient(
+
 135deg,
+
 #cfa36d 0%,
+
 #e2c18d 45%,
+
 #b9854f 100%
+
 );
+
+border-top:
+
+1px solid rgba(58,40,28,.10);
 
 }
 
 .footer-inner{
 
-max-width:1200px;
+max-width:1300px;
 
 margin:auto;
 
 display:flex;
 
-justify-content:space-between;
-
 align-items:center;
 
-gap:20px;
+justify-content:space-between;
+
+gap:26px;
 
 flex-wrap:wrap;
 
 }
 
-.footer h4{
+.footer-brand h2{
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:1.8rem;
+font-size:2rem;
+
+margin-bottom:4px;
 
 color:#2d2118;
 
 }
 
-.footer p{
+.footer-brand p{
 
-font-size:.9rem;
+font-size:.92rem;
 
-color:#5d4430;
+color:#5e4430;
 
 }
 
@@ -287,105 +246,167 @@ flex-wrap:wrap;
 
 text-decoration:none;
 
+font-size:.9rem;
+
+font-weight:600;
+
 padding:10px 16px;
 
 border-radius:999px;
 
 background:
-rgba(255,255,255,.35);
 
-font-size:.88rem;
+rgba(255,248,239,.45);
 
-font-weight:600;
+color:#3d2a1f;
 
-color:#3f2d20;
+}
+
+.footer-copy{
+
+text-align:right;
+
+}
+
+.footer-copy p{
+
+font-style:italic;
+
+font-size:.92rem;
+
+margin-bottom:5px;
+
+color:#4d3726;
+
+}
+
+.footer-copy span{
+
+font-size:.8rem;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#74533a;
 
 }
 
 @media(max-width:760px){
 
-.author-card{
+.content-card{
 
-padding:40px 28px;
-
-}
-
-.author-card h2{
-
-font-size:2.3rem;
+padding:42px 30px;
 
 }
 
-.quote h3{
+.footer-inner{
 
-font-size:1.9rem;
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-copy{
+
+text-align:left;
 
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <section class="hero">
 
-<span>
-About the Author
-</span>
-
 <h1>
-Bradley Hobbs
+
+About the Author
+
 </h1>
 
 <p>
-Writing from hidden places of surrender, prayer, healing,
-and faithfulness while remaining small enough to hear
-the voice of Jesus.
+
+A quiet journey of surrender, faithfulness, and learning
+
+to remain small enough to hear the voice of Jesus.
+
 </p>
 
 </section>
 
-<section class="author-section">
+<section class="content">
 
-<div class="author-card">
-
-<h2>
-A Willing Vessel
-</h2>
+<div class="content-card">
 
 <p>
+
 Bradley Hobbs writes from a place of faith, surrender,
+
 and a desire to remain a willing vessel in the hands of Jesus.
+
 Rather than pursuing recognition or building a large platform,
+
 his heart has continually been drawn toward a quieter prayer:
-Lord, keep me willing. Keep me listening. Keep me small enough to hear You.
+
+Lord, keep me willing. Keep me listening.
+
+Keep me small enough to hear You.
+
 </p>
 
 <p>
-Much of his writing grows from hidden places where lessons are learned through prayer,
-waiting seasons, healing, and the everyday journey of walking with God.
+
+Much of his writing grows from hidden places where lessons
+
+are learned through prayer, waiting seasons, healing,
+
+and the everyday journey of walking with God.
+
 Through deeply personal reflections and spiritually grounded messages,
+
 Bradley shares themes of humility, surrender, faithfulness,
+
 and the life changing power found in the name of Jesus.
+
 </p>
 
 <p>
+
 His passion is not centered around becoming known.
+
 A greater desire lives within these pages:
+
 helping others draw closer to Jesus and reminding hearts
+
 that God still speaks within quiet places.
+
 Hidden seasons are never wasted,
+
 and willing vessels remain precious in the hands of God.
+
 </p>
 
-<div class="quote">
+<p>
 
-<h3>
-“No big name.<br>
-Just a willing vessel.”
-</h3>
+When titles fade and recognition passes away,
+
+one prayer continues guiding the journey:
+
+No big name. Just a willing vessel.
+
+Still small enough to hear Him.
+
+</p>
+
+<div class="signature">
+
+Bradley Hobbs
 
 </div>
 
@@ -393,18 +414,22 @@ Just a willing vessel.”
 
 </section>
 
-<footer class="footer">
+<footer class="site-footer">
 
 <div class="footer-inner">
 
-<div>
+<div class="footer-brand">
 
-<h4>
+<h2>
+
 Small Enough to Hear Him
-</h4>
+
+</h2>
 
 <p>
-Still small enough to hear Him.
+
+Walking quietly with Jesus.
+
 </p>
 
 </div>
@@ -412,8 +437,26 @@ Still small enough to hear Him.
 <div class="footer-links">
 
 <a href="index.html">Home</a>
+
 <a href="contents.html">Contents</a>
+
 <a href="preface.html">Preface</a>
+
+</div>
+
+<div class="footer-copy">
+
+<p>
+
+No big name. Just a willing vessel.
+
+</p>
+
+<span>
+
+© Bradley Hobbs
+
+</span>
 
 </div>
 
@@ -422,4 +465,5 @@ Still small enough to hear Him.
 </footer>
 
 </body>
+
 </html>
