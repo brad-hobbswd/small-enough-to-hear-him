@@ -1,0 +1,711 @@
+<!-- chapter2.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Chapter Two | Learning the Language of Listening
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--bg:#f5ead7;
+--card:#fffaf2;
+
+--gold:#c89a56;
+--gold-soft:#ddb97d;
+
+--brown:#5b4130;
+--brown-dark:#2d2118;
+
+--text:#2c251f;
+--text-soft:#6f6459;
+
+--border:rgba(58,40,28,.10);
+
+--shadow:
+0 24px 55px rgba(58,40,28,.08);
+
+}
+
+body{
+
+background:var(--bg);
+
+font-family:'Inter',sans-serif;
+
+color:var(--text);
+
+line-height:2;
+
+overflow-x:hidden;
+
+}
+
+nav{
+
+width:100%;
+
+padding:24px 7%;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+backdrop-filter:blur(14px);
+
+background:
+rgba(245,234,215,.82);
+
+border-bottom:
+1px solid rgba(58,40,28,.05);
+
+}
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+font-weight:700;
+
+color:var(--brown-dark);
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+flex-wrap:wrap;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+font-size:.92rem;
+
+font-weight:600;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+color:var(--brown);
+
+transition:.3s ease;
+
+}
+
+.nav-links a:hover{
+
+background:
+rgba(255,255,255,.55);
+
+}
+
+.chapter-hero{
+
+padding:
+120px 7% 55px;
+
+max-width:1050px;
+
+margin:auto;
+
+position:relative;
+
+}
+
+.chapter-hero::before{
+
+content:"";
+
+position:absolute;
+
+top:30px;
+right:40px;
+
+width:240px;
+height:240px;
+
+border-radius:50%;
+
+background:
+rgba(221,185,125,.16);
+
+filter:blur(60px);
+
+z-index:-1;
+
+}
+
+.chapter-meta{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+background:
+rgba(255,255,255,.52);
+
+border:
+1px solid rgba(58,40,28,.06);
+
+font-size:.8rem;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:28px;
+
+}
+
+.chapter-hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:
+clamp(4rem,8vw,6.4rem);
+
+line-height:.92;
+
+max-width:850px;
+
+margin-bottom:28px;
+
+color:var(--brown-dark);
+
+}
+
+.chapter-description{
+
+max-width:720px;
+
+font-size:1.08rem;
+
+line-height:1.95;
+
+color:var(--text-soft);
+
+}
+
+.chapter-content{
+
+padding:
+10px 7% 90px;
+
+}
+
+.content-inner{
+
+max-width:860px;
+
+margin:auto;
+
+background:var(--card);
+
+padding:70px 60px;
+
+border-radius:36px;
+
+border:
+1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.content-inner::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:
+linear-gradient(
+to right,
+var(--gold),
+var(--gold-soft)
+);
+
+}
+
+.content-inner p{
+
+font-size:1.08rem;
+
+color:var(--text-soft);
+
+margin-bottom:34px;
+
+}
+
+.pull-quote{
+
+margin:50px 0;
+
+padding:45px 40px;
+
+border-radius:28px;
+
+background:
+linear-gradient(
+135deg,
+rgba(221,185,125,.14),
+rgba(255,255,255,.45)
+);
+
+border:
+1px solid rgba(200,154,86,.12);
+
+}
+
+.pull-quote h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.4rem;
+
+line-height:1.2;
+
+color:var(--brown-dark);
+
+}
+
+.chapter-navigation{
+
+padding:0 7% 90px;
+
+}
+
+.chapter-nav-inner{
+
+max-width:860px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.chapter-navigation a{
+
+text-decoration:none;
+
+padding:16px 24px;
+
+border-radius:999px;
+
+background:
+rgba(255,255,255,.5);
+
+border:
+1px solid rgba(58,40,28,.08);
+
+font-size:.95rem;
+
+font-weight:600;
+
+color:var(--brown-dark);
+
+transition:.35s ease;
+
+}
+
+.site-footer{
+
+padding:34px 7% 28px;
+
+background:
+linear-gradient(
+135deg,
+#cfa36d 0%,
+#e2c18d 45%,
+#b9854f 100%
+);
+
+}
+
+.footer-inner{
+
+max-width:1300px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:26px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-brand h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+margin-bottom:4px;
+
+color:#2d2118;
+
+}
+
+.footer-brand p{
+
+font-size:.92rem;
+
+color:#5e4430;
+
+}
+
+.footer-links{
+
+display:flex;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+font-size:.9rem;
+
+font-weight:600;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+background:
+rgba(255,248,239,.45);
+
+color:#3d2a1f;
+
+}
+
+.footer-copy{
+
+text-align:right;
+
+}
+
+.footer-copy p{
+
+font-style:italic;
+
+font-size:.92rem;
+
+margin-bottom:5px;
+
+color:#4d3726;
+
+}
+
+.footer-copy span{
+
+font-size:.8rem;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#74533a;
+
+}
+
+@media(max-width:900px){
+
+.content-inner{
+
+padding:50px 34px;
+
+}
+
+.chapter-nav-inner{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.chapter-navigation a{
+
+text-align:center;
+
+}
+
+.footer-inner{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-copy{
+
+text-align:left;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Small Enough to Hear Him
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="about.html">About</a>
+
+</div>
+
+</nav>
+
+<section class="chapter-hero">
+
+<div class="chapter-meta">
+Chapter Two
+</div>
+
+<h1>
+Learning the Language of Listening
+</h1>
+
+<p class="chapter-description">
+Slowing down enough to recognize the quiet ways Jesus still speaks.
+</p>
+
+</section>
+
+<section class="chapter-content">
+
+<div class="content-inner">
+
+<p>
+One of the greatest challenges in life is not learning how to speak. One of the greatest challenges is learning how to listen.
+</p>
+
+<p>
+The world constantly teaches people to raise voices, defend opinions, and make sure every thought finds a platform. Noise surrounds daily life. Notifications appear without invitation. Opinions compete for attention. Conversations move quickly. Silence often feels uncomfortable.
+</p>
+
+<p>
+Hearing God rarely grows in noise.
+</p>
+
+<div class="pull-quote">
+
+<h2>
+“The voice of Jesus has never needed to compete with chaos.”
+</h2>
+
+</div>
+
+<p>
+Many imagine hearing from God as thunder shaking mountains or a dramatic moment that changes everything in an instant. Scripture reveals another reality. God often speaks in ways that require attention, humility, and stillness.
+</p>
+
+<p>
+Many times people ask, “Why can’t I hear God?” A different question sometimes becomes necessary: “What voices have become louder than His?”
+</p>
+
+<p>
+Distractions do not always arrive through sinful things. Sometimes good things become loud things. Responsibilities, schedules, worries, expectations, ambitions, and endless activity can slowly fill spaces where stillness once lived.
+</p>
+
+<p>
+A crowded life often creates a crowded mind.
+Crowded minds struggle to listen.
+</p>
+
+<p>
+Scripture tells of a moment when the prophet Elijah stood waiting for God. A mighty wind came, but God was not within the wind. An earthquake came, but God was not within the earthquake. Fire appeared, but God was not within the fire. After all of that came a still small voice.
+</p>
+
+<p>
+Many people seek the spectacular while Jesus gently speaks within ordinary moments.
+</p>
+
+<p>
+A quiet prayer before sunrise.
+A verse suddenly resting deeply within the heart.
+A moment of peace during confusion.
+A whisper during worship.
+A gentle conviction.
+A reminder from Scripture arriving at exactly the right moment.
+</p>
+
+<p>
+Jesus still speaks.
+</p>
+
+<p>
+Listening requires surrender because listening means releasing the need to control every outcome. Listening asks hearts to slow down enough to recognize that God is already speaking.
+</p>
+
+<p>
+Listening also requires humility.
+</p>
+
+<p>
+Pride often enters rooms already filled with answers.
+Humility enters rooms ready to learn.
+</p>
+
+<p>
+Children often listen with wonder. Ants move with quiet purpose. Servants remain attentive to direction. A willing vessel learns those same rhythms. Staying ready. Remaining teachable. Keeping ears open.
+</p>
+
+<p>
+The desire of a willing vessel does not become, “Lord, make my voice louder.”
+</p>
+
+<p>
+The desire becomes, “Lord, help me hear Yours.”
+</p>
+
+<p>
+Small enough to hear Him means understanding that hearing Jesus matters more than being heard by people.
+</p>
+
+</div>
+
+</section>
+
+<section class="chapter-navigation">
+
+<div class="chapter-nav-inner">
+
+<a href="chapter1.html">
+← Previous Chapter
+</a>
+
+<a href="chapter3.html">
+Next Chapter →
+</a>
+
+</div>
+
+</section>
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h2>
+Small Enough to Hear Him
+</h2>
+
+<p>
+Walking quietly with Jesus.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="preface.html">Preface</a>
+
+</div>
+
+<div class="footer-copy">
+
+<p>
+No big name. Just a willing vessel.
+</p>
+
+<span>
+© Bradley Hobbs
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
