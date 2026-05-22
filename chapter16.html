@@ -1,0 +1,888 @@
+<!-- chapter16.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Chapter Sixteen | Still Small Enough to Hear Him
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--bg:#f5ead7;
+--card:#fffaf2;
+
+--gold:#c89a56;
+--gold-soft:#ddb97d;
+
+--brown:#5b4130;
+--brown-dark:#2d2118;
+
+--text:#2c251f;
+--text-soft:#6f6459;
+
+--border:rgba(58,40,28,.10);
+
+--shadow:
+0 14px 34px rgba(58,40,28,.06);
+
+}
+
+body{
+
+background:var(--bg);
+
+font-family:'Inter',sans-serif;
+
+color:var(--text);
+
+line-height:1.68;
+
+overflow-x:hidden;
+
+}
+
+/* NAVIGATION */
+
+nav{
+
+width:100%;
+
+padding:18px 6%;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+backdrop-filter:blur(14px);
+
+background:
+rgba(245,234,215,.84);
+
+border-bottom:
+1px solid rgba(58,40,28,.05);
+
+}
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.75rem;
+
+font-weight:700;
+
+color:var(--brown-dark);
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+font-size:.82rem;
+
+font-weight:600;
+
+padding:8px 13px;
+
+border-radius:999px;
+
+color:var(--brown);
+
+transition:.25s ease;
+
+}
+
+.nav-links a:hover{
+
+background:
+rgba(255,255,255,.55);
+
+}
+
+/* HERO */
+
+.chapter-hero{
+
+padding:
+42px 6%
+24px;
+
+max-width:980px;
+
+margin:auto;
+
+position:relative;
+
+}
+
+.chapter-hero::before{
+
+content:"";
+
+position:absolute;
+
+top:10px;
+right:20px;
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+background:
+rgba(221,185,125,.12);
+
+filter:blur(40px);
+
+z-index:-1;
+
+}
+
+.chapter-meta{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+background:
+rgba(255,255,255,.5);
+
+border:
+1px solid rgba(58,40,28,.06);
+
+font-size:.68rem;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:14px;
+
+}
+
+.chapter-hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:
+clamp(2.8rem,5vw,4.8rem);
+
+line-height:.92;
+
+max-width:760px;
+
+margin-bottom:16px;
+
+color:var(--brown-dark);
+
+}
+
+.chapter-description{
+
+max-width:620px;
+
+font-size:.94rem;
+
+line-height:1.72;
+
+color:var(--text-soft);
+
+}
+
+/* CONTENT */
+
+.chapter-content{
+
+padding:
+0 6%
+46px;
+
+}
+
+.content-inner{
+
+max-width:820px;
+
+margin:auto;
+
+background:var(--card);
+
+padding:28px 24px;
+
+border-radius:22px;
+
+border:
+1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.content-inner::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:3px;
+
+background:
+linear-gradient(
+to right,
+var(--gold),
+var(--gold-soft)
+);
+
+}
+
+.content-inner p{
+
+font-size:.92rem;
+
+line-height:1.72;
+
+margin-bottom:18px;
+
+color:var(--text-soft);
+
+}
+
+.content-inner p:last-child{
+
+margin-bottom:0;
+
+}
+
+/* QUOTE */
+
+.pull-quote{
+
+margin:24px 0;
+
+padding:22px 20px;
+
+border-radius:18px;
+
+background:
+linear-gradient(
+135deg,
+rgba(221,185,125,.12),
+rgba(255,255,255,.45)
+);
+
+border:
+1px solid rgba(200,154,86,.10);
+
+}
+
+.pull-quote h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.8rem;
+
+line-height:1.08;
+
+color:var(--brown-dark);
+
+}
+
+/* NAVIGATION */
+
+.chapter-navigation{
+
+padding:
+0 6%
+46px;
+
+}
+
+.chapter-nav-inner{
+
+max-width:820px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.chapter-navigation a{
+
+text-decoration:none;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+background:
+rgba(255,255,255,.45);
+
+border:
+1px solid rgba(58,40,28,.08);
+
+font-size:.82rem;
+
+font-weight:600;
+
+color:var(--brown-dark);
+
+transition:.28s ease;
+
+}
+
+.chapter-navigation a:hover{
+
+background:
+rgba(255,255,255,.82);
+
+transform:translateY(-2px);
+
+}
+
+/* FOOTER */
+
+.site-footer{
+
+padding:24px 6% 18px;
+
+background:
+linear-gradient(
+135deg,
+#cfa36d 0%,
+#e2c18d 45%,
+#b9854f 100%
+);
+
+border-top:
+1px solid rgba(58,40,28,.10);
+
+}
+
+.footer-inner{
+
+max-width:1200px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:14px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-brand h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.6rem;
+
+margin-bottom:2px;
+
+color:#2d2118;
+
+}
+
+.footer-brand p{
+
+font-size:.78rem;
+
+color:#5e4430;
+
+}
+
+.footer-links{
+
+display:flex;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+font-size:.76rem;
+
+font-weight:600;
+
+padding:7px 11px;
+
+border-radius:999px;
+
+background:
+rgba(255,248,239,.38);
+
+color:#3d2a1f;
+
+transition:.25s ease;
+
+}
+
+.footer-links a:hover{
+
+background:
+rgba(255,248,239,.82);
+
+}
+
+.footer-copy{
+
+text-align:right;
+
+}
+
+.footer-copy p{
+
+font-size:.76rem;
+
+margin-bottom:2px;
+
+color:#4d3726;
+
+}
+
+.footer-copy span{
+
+font-size:.64rem;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#74533a;
+
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+nav{
+
+padding:16px 5%;
+
+}
+
+.logo{
+
+font-size:1.55rem;
+
+}
+
+.chapter-hero{
+
+padding:
+32px 5%
+20px;
+
+}
+
+.chapter-hero h1{
+
+font-size:3.1rem;
+
+}
+
+.chapter-description{
+
+font-size:.9rem;
+
+}
+
+.chapter-content{
+
+padding:
+0 5%
+38px;
+
+}
+
+.content-inner{
+
+padding:22px 18px;
+
+border-radius:18px;
+
+}
+
+.content-inner p{
+
+font-size:.88rem;
+
+line-height:1.66;
+
+margin-bottom:16px;
+
+}
+
+.pull-quote{
+
+padding:18px 16px;
+
+margin:20px 0;
+
+}
+
+.pull-quote h2{
+
+font-size:1.5rem;
+
+}
+
+.chapter-navigation{
+
+padding:
+0 5%
+38px;
+
+}
+
+.chapter-nav-inner{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.chapter-navigation a{
+
+text-align:center;
+
+}
+
+.footer-inner{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-copy{
+
+text-align:left;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Small Enough to Hear Him
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="about.html">About</a>
+
+</div>
+
+</nav>
+
+<section class="chapter-hero">
+
+<div class="chapter-meta">
+Chapter Sixteen
+</div>
+
+<h1>
+Still Small Enough to Hear Him
+</h1>
+
+<p class="chapter-description">
+
+A final reminder that the greatest place a heart can remain
+is close to Jesus.
+
+</p>
+
+</section>
+
+<section class="chapter-content">
+
+<div class="content-inner">
+
+<p>
+Life continues changing.
+</p>
+
+<p>
+Seasons come and go. Certain prayers receive answers quickly while others require patient waiting. Joyful moments arrive. Difficult valleys appear. Through every changing season, one truth remains steady:
+</p>
+
+<p>
+Jesus remains faithful.
+</p>
+
+<div class="pull-quote">
+
+<h2>
+“The safest place
+for any heart
+is near Jesus.”
+</h2>
+
+</div>
+
+<p>
+This journey was never about becoming widely recognized. These pages were never written to build a large platform or gather attention from people.
+</p>
+
+<p>
+The message remained simple from beginning to end:
+</p>
+
+<p>
+Stay close to Jesus.
+</p>
+
+<p>
+The world constantly pressures hearts to become louder, faster, larger, and more distracted. Jesus still gently calls people toward surrender, humility, stillness, and nearness.
+</p>
+
+<p>
+Many people spend years searching for peace while drifting far from the One who gives peace freely.
+</p>
+
+<p>
+Jesus remains enough.
+</p>
+
+<p>
+Enough during wilderness seasons.
+Enough during grief.
+Enough during uncertainty.
+Enough during hidden battles no one else fully understands.
+</p>
+
+<p>
+A willing vessel slowly learns that fulfillment cannot be found through applause, achievement, or human recognition alone. Hearts were always created for relationship with Jesus.
+</p>
+
+<p>
+Nothing replaces His presence.
+</p>
+
+<p>
+Moments near Jesus shape hearts deeply. Quiet prayer changes people. Surrender changes people. Humility changes people. Intimacy with God creates strength that outward appearances can never fully imitate.
+</p>
+
+<p>
+The journey of faith does not require perfection. Every believer stumbles at times. Every believer experiences moments of weakness, uncertainty, or fear.
+</p>
+
+<p>
+Grace continues carrying willing hearts forward.
+</p>
+
+<p>
+Jesus never asked people to become flawless before coming near Him. He invites weary hearts closer exactly as they are.
+</p>
+
+<p>
+Many distractions will continue competing for attention throughout life. Noise will continue rising. Fear will continue attempting to shake hearts.
+</p>
+
+<p>
+The voice of Jesus still remains greater.
+</p>
+
+<p>
+A willing vessel keeps returning to Him daily.
+Not out of religious obligation.
+Out of love.
+Out of dependence.
+Out of knowing that life apart from His presence becomes empty very quickly.
+</p>
+
+<p>
+Some readers may continue walking through difficult seasons even now. Certain hearts may still carry unanswered questions, hidden tears, or quiet exhaustion.
+</p>
+
+<p>
+Jesus still sees.
+Jesus still hears.
+Jesus still remains near.
+</p>
+
+<p>
+Nothing surrendered to Him becomes wasted.
+No hidden prayer goes unnoticed.
+No faithful act of obedience escapes heaven’s attention.
+</p>
+
+<p>
+The ant remains a quiet reminder.
+</p>
+
+<p>
+Small.
+Humble.
+Prepared.
+Faithful.
+</p>
+
+<p>
+Not seeking greatness through pride.
+Simply remaining willing.
+</p>
+
+<p>
+That became the heartbeat of this entire journey.
+</p>
+
+<p>
+Still small enough to hear Him.
+Still willing to follow Him.
+Still trusting His voice above every distraction.
+</p>
+
+<p>
+No big name.
+Just a willing vessel.
+</p>
+
+</div>
+
+</section>
+
+<section class="chapter-navigation">
+
+<div class="chapter-nav-inner">
+
+<a href="chapter15.html">
+← Previous Chapter
+</a>
+
+<a href="contents.html">
+Return to Contents
+</a>
+
+</div>
+
+</section>
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h2>
+Small Enough to Hear Him
+</h2>
+
+<p>
+Walking quietly with Jesus.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="preface.html">Preface</a>
+
+</div>
+
+<div class="footer-copy">
+
+<p>
+No big name. Just a willing vessel.
+</p>
+
+<span>
+© Bradley Hobbs
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
