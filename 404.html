@@ -1,0 +1,646 @@
+<!-- 404.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Page Not Found | Small Enough to Hear Him
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--bg:#f5ead7;
+--card:#fffaf2;
+
+--gold:#c89a56;
+--gold-soft:#ddb97d;
+
+--brown:#5b4130;
+--brown-dark:#2d2118;
+
+--text:#2c251f;
+--text-soft:#6f6459;
+
+--border:rgba(58,40,28,.10);
+
+--shadow:
+0 24px 55px rgba(58,40,28,.08);
+
+}
+
+body{
+
+background:var(--bg);
+
+font-family:'Inter',sans-serif;
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+color:var(--text);
+
+overflow-x:hidden;
+
+}
+
+nav{
+
+width:100%;
+
+padding:24px 7%;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+backdrop-filter:blur(14px);
+
+background:
+rgba(245,234,215,.82);
+
+border-bottom:
+1px solid rgba(58,40,28,.05);
+
+}
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+font-weight:700;
+
+color:var(--brown-dark);
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+flex-wrap:wrap;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+font-size:.92rem;
+
+font-weight:600;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+color:var(--brown);
+
+transition:.3s ease;
+
+}
+
+.nav-links a:hover{
+
+background:
+rgba(255,255,255,.55);
+
+}
+
+.main{
+
+flex:1;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+padding:70px 7%;
+
+}
+
+.card{
+
+max-width:920px;
+
+width:100%;
+
+background:var(--card);
+
+padding:90px 70px;
+
+border-radius:40px;
+
+border:
+1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:
+linear-gradient(
+to right,
+var(--gold),
+var(--gold-soft)
+);
+
+}
+
+.glow{
+
+position:absolute;
+
+top:-60px;
+right:-20px;
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+background:
+rgba(221,185,125,.15);
+
+filter:blur(70px);
+
+}
+
+.label{
+
+position:relative;
+
+display:inline-flex;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+background:
+rgba(255,255,255,.55);
+
+border:
+1px solid rgba(58,40,28,.06);
+
+font-size:.8rem;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:28px;
+
+z-index:2;
+
+}
+
+.card h1{
+
+position:relative;
+
+z-index:2;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:
+clamp(4rem,8vw,6.5rem);
+
+line-height:.9;
+
+margin-bottom:26px;
+
+color:var(--brown-dark);
+
+}
+
+.card p{
+
+position:relative;
+
+z-index:2;
+
+font-size:1.08rem;
+
+line-height:2;
+
+max-width:720px;
+
+margin:
+0 auto 30px;
+
+color:var(--text-soft);
+
+}
+
+.quote{
+
+position:relative;
+
+z-index:2;
+
+margin:50px 0;
+
+padding:42px 38px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(221,185,125,.14),
+rgba(255,255,255,.55)
+);
+
+border:
+1px solid rgba(200,154,86,.12);
+
+}
+
+.quote h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.4rem;
+
+line-height:1.2;
+
+color:var(--brown-dark);
+
+}
+
+.buttons{
+
+position:relative;
+
+z-index:2;
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+margin-top:35px;
+
+}
+
+.buttons a{
+
+text-decoration:none;
+
+padding:16px 24px;
+
+border-radius:999px;
+
+font-size:.95rem;
+
+font-weight:600;
+
+transition:.35s ease;
+
+}
+
+.primary-btn{
+
+background:
+linear-gradient(
+135deg,
+var(--gold),
+var(--gold-soft)
+);
+
+color:#2d2118;
+
+}
+
+.secondary-btn{
+
+background:
+rgba(255,255,255,.55);
+
+border:
+1px solid rgba(58,40,28,.08);
+
+color:var(--brown-dark);
+
+}
+
+.site-footer{
+
+padding:34px 7% 28px;
+
+background:
+linear-gradient(
+135deg,
+#cfa36d 0%,
+#e2c18d 45%,
+#b9854f 100%
+);
+
+}
+
+.footer-inner{
+
+max-width:1300px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:24px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-brand h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+margin-bottom:4px;
+
+color:#2d2118;
+
+}
+
+.footer-brand p{
+
+font-size:.92rem;
+
+color:#5e4430;
+
+}
+
+.footer-links{
+
+display:flex;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+font-size:.9rem;
+
+font-weight:600;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+background:
+rgba(255,248,239,.45);
+
+color:#3d2a1f;
+
+}
+
+.footer-copy{
+
+text-align:right;
+
+}
+
+.footer-copy p{
+
+font-style:italic;
+
+font-size:.92rem;
+
+margin-bottom:5px;
+
+color:#4d3726;
+
+}
+
+.footer-copy span{
+
+font-size:.8rem;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#74533a;
+
+}
+
+@media(max-width:900px){
+
+.card{
+
+padding:60px 34px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.buttons a{
+
+text-align:center;
+
+}
+
+.footer-inner{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-copy{
+
+text-align:left;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Small Enough to Hear Him
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</nav>
+
+<section class="main">
+
+<div class="card">
+
+<div class="glow"></div>
+
+<div class="label">
+404 Error
+</div>
+
+<h1>
+This Page Drifted Away
+</h1>
+
+<p>
+The page you were looking for could not be found. Sometimes links break, pages move, or paths become lost along the journey.
+</p>
+
+<p>
+Grace still guides wandering hearts back home.
+</p>
+
+<div class="quote">
+
+<h2>
+“Small enough to hear Him.
+Close enough to follow Him.”
+</h2>
+
+</div>
+
+<div class="buttons">
+
+<a
+href="index.html"
+class="primary-btn">
+Return Home
+</a>
+
+<a
+href="contents.html"
+class="secondary-btn">
+View Contents
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h2>
+Small Enough to Hear Him
+</h2>
+
+<p>
+Walking quietly with Jesus.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="verses.html">Scriptures</a>
+
+</div>
+
+<div class="footer-copy">
+
+<p>
+No big name. Just a willing vessel.
+</p>
+
+<span>
+© Bradley Hobbs
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
