@@ -1,48 +1,18 @@
-# Small Enough to Hear Him
+# Small Enough to Hear Him | Bradley Hobbs
 
-A reflective and immersive Christian book experience centered on humility, surrender, hidden faithfulness, healing, wilderness seasons, and staying close enough to hear the voice of Jesus.
+A Christian devotional or book project about humility, spiritual attentiveness, listening for God's direction, and becoming willing to follow His voice.
 
-“ No big name. Just a willing vessel. ”
+## Live Website
+https://brad-hobbswd.github.io/small-enough-to-hear-him/
 
----
+## Overview
+A Christian devotional or book project about humility, spiritual attentiveness, listening for God's direction, and becoming willing to follow His voice.
 
-## About the Book
-
-*Small Enough to Hear Him* explores the beauty of quiet obedience and learning to remain close to Jesus within every season of life.
-
-Through seventeen reflective chapters, additional Scripture pages, prayers, and personal reflections, this project creates an atmosphere of stillness, surrender, and deeper trust in God.
-
-Rather than pursuing recognition or performance, this journey points hearts back toward humility, hidden faithfulness, and the presence of Jesus.
-
----
-
-## Included Pages
-
-### Main Pages
-
-- `index.html`
-- `contents.html`
+## Page Directory
 - `about.html`
-- `contact.html`
-- `404.html`
-
-### Opening Pages
-
-- `preface.html`
-- `dedication.html`
 - `acknowledgements.html`
-
-### Chapters
-
+- `chaper16.html`
 - `chapter1.html`
-- `chapter2.html`
-- `chapter3.html`
-- `chapter4.html`
-- `chapter5.html`
-- `chapter6.html`
-- `chapter7.html`
-- `chapter8.html`
-- `chapter9.html`
 - `chapter10.html`
 - `chapter11.html`
 - `chapter12.html`
@@ -51,74 +21,31 @@ Rather than pursuing recognition or performance, this journey points hearts back
 - `chapter15.html`
 - `chapter16.html`
 - `chapter17.html`
-
-### Additional Pages
-
-- `verses.html`
+- `chapter2.html`
+- `chapter3.html`
+- `chapter4.html`
+- `chapter5.html`
+- `chapter6.html`
+- `chapter7.html`
+- `chapter8.html`
+- `chapter9.html`
+- `contact.html`
+- `contents.html`
+- `dedication.html`
 - `prayer.html`
-- `why-i-wrote-this.html`
+- `preface.html`
 - `thankyou.html`
+- `verses.html`
+- `why-i-wrote-this.html`
 
----
+## Technology
+Static website published with GitHub Pages. Content and presentation are provided through the HTML pages and supporting assets in this repository.
 
-## Features
+## Copyright and Permissions
+Copyright © 2026 Bradley Hobbs. All rights reserved.
 
-- Responsive modern design
-- Immersive devotional atmosphere
-- Elegant typography using Cormorant Garamond and Inter
-- Mobile friendly layouts
-- Soft warm color palette
-- Scripture focused reflections
-- Quiet luxury inspired visual styling
-- Smooth card based content organization
-- Fully static GitHub Pages compatible
+Original book or devotional text, reflections, website copy, graphics, visual designs, and original source code are protected by copyright. Please obtain written permission before reproduction, republication, redistribution, modification, or commercial use, except where applicable law permits otherwise. Third-party materials remain subject to their owners' rights and terms.
 
----
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- Google Fonts
-
----
-
-## Theme
-
-This project was designed to feel:
-
-- Quiet
-- Reflective
-- Warm
-- Humble
-- Peaceful
-- Spiritually immersive
-
-The visual atmosphere intentionally avoids loud commercial styling in favor of stillness, warmth, softness, and elegance.
-
----
-
-## Author
-
-### Bradley Hobbs
-
-A writer passionate about Jesus, surrender, healing, humility, hidden faithfulness, and encouraging weary hearts to remain close to the presence of God.
-
----
-
-## Live Website
-
-https://brad-hobbswd.github.io/small-enough-to-hear-him/
-
-```txt
-https://brad-hobbswd.github.io/small-enough-to-hear-him/
-```
-
----
-
-## Final Thought
-
-“Small enough to hear Him.
-Close enough to follow Him.”
-
----
+## Search Engine Files
+- [Sitemap](sitemap.xml)
+- [robots.txt](robots.txt)
